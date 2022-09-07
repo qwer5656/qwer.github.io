@@ -1,3 +1,4 @@
+https://qwer5656.github.io/vue/vue-pinia/
 https://qwer5656.github.io/c_/threadpool/
 https://qwer5656.github.io/tags/index.html
 https://qwer5656.github.io/technicalconcept/ObjectOriented/
@@ -118,6 +119,8 @@ https://qwer5656.github.io/tags/linear-gradient/
 https://qwer5656.github.io/tags/Leetcode/
 https://qwer5656.github.io/tags/Javascript/
 https://qwer5656.github.io/tags/Thread/
+https://qwer5656.github.io/tags/Vue/
+https://qwer5656.github.io/tags/Pinia/
 https://qwer5656.github.io/categories/Hexo/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/C/Design-Pattern/
@@ -127,3 +130,4 @@ https://qwer5656.github.io/categories/Leetcode/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Hard/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Easy/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Medium/
+https://qwer5656.github.io/categories/Vue/
