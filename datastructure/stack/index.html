@@ -27,21 +27,20 @@ crossorigin="anonymous"></script>
 
 
 
-  <meta name="description" content="Difficult:Medium 題目Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assu">
+  <meta name="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#16)  3Sum Closest">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode16/index.html">
+<meta property="og:title" content="stack">
+<meta property="og:url" content="https://qwer5656.github.io/datastructure/stack/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Medium 題目Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assu">
+<meta property="og:description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-08-02T01:10:10.000Z">
-<meta property="article:modified_time" content="2022-08-30T05:55:39.217Z">
+<meta property="article:published_time" content="2022-09-08T06:48:11.000Z">
+<meta property="article:modified_time" content="2022-09-08T06:48:11.883Z">
 <meta property="article:author" content="Neil">
-<meta property="article:tag" content="Leetcode">
-<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="Javascript LeetCode C# Vue css html unit Test e2e Vuex">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode16/">
+<link rel="canonical" href="https://qwer5656.github.io/datastructure/stack/">
 
 
 <script id="page-configurations">
@@ -54,7 +53,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#16)  3Sum Closest | Neil coding之路</title>
+  <title>stack | Neil coding之路</title>
   
 
 
@@ -198,7 +197,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode16/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/datastructure/stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -211,7 +210,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#16)  3Sum Closest
+          stack
         </h1>
 
         <div class="post-meta">
@@ -221,27 +220,7 @@ crossorigin="anonymous"></script>
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2022-08-02 09:10:10" itemprop="dateCreated datePublished" datetime="2022-08-02T09:10:10+08:00">2022-08-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-08-30 13:55:39" itemprop="dateModified" datetime="2022-08-30T13:55:39+08:00">2022-08-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
-                </span>
+              <time title="創建時間：2022-09-08 14:48:11" itemprop="dateCreated datePublished" datetime="2022-09-08T14:48:11+08:00">2022-09-08</time>
             </span>
 
           
@@ -260,8 +239,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode16/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode16/" itemprop="commentCount"></span>
+    <a title="disqus" href="/datastructure/stack/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="datastructure/stack/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,25 +255,7 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.</p>
-<p>Return the sum of the three integers.</p>
-<p>You may assume that each input would have exactly one solution.</p>
-<span id="more"></span>
-
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定一個長度為 n 的整數數組 nums 和一個整數目標，在 nums 中找到三個整數，使得總和最接近目標。</p>
-<p>返回三個整數的和。</p>
-<p>您可以假設每個輸入都只有一個解決方案。</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,2,1,-4], target = 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</span><br></pre></td></tr></table></figure>
-
-<p>Example 2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [0,0,0], target = 1</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
-
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.先將陣列小到大排列<br>2.避免重複組合 第一個數字判斷數字是否跟上一個數字相同<br>3.相差大於min相差時 記錄起來</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Code 1 :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> threeSumClosest=<span class="keyword">function</span>(<span class="params">nums, target</span>) &#123;</span><br><span class="line">       <span class="keyword">let</span> min=<span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">let</span> newarr=nums.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> a-b;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;newarr.<span class="property">length</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(newarr[i]==newarr[i-<span class="number">1</span>])<span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">let</span> left=i+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">let</span> right=newarr.<span class="property">length</span>-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(left&lt;right)&#123;</span><br><span class="line">                <span class="keyword">let</span> leftval=newarr[left];</span><br><span class="line">                <span class="keyword">let</span> rightval=newarr[right];</span><br><span class="line">                <span class="keyword">let</span> sum=leftval+rightval+newarr[i];</span><br><span class="line">                <span class="keyword">if</span>(min==<span class="literal">null</span>||(<span class="title class_">Math</span>.<span class="title function_">abs</span>(target-min)&gt;<span class="title class_">Math</span>.<span class="title function_">abs</span>(target-sum)))&#123;</span><br><span class="line">                    min=sum;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(target&gt;sum)&#123;</span><br><span class="line">    </span><br><span class="line">                    left++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    right--;</span><br><span class="line">                &#125;            </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+        
     </div>
 
     
@@ -302,10 +263,6 @@ crossorigin="anonymous"></script>
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
-              <a href="/tags/Javascript/" rel="tag"># Javascript</a>
-          </div>
 
         
 
@@ -313,13 +270,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode15/" rel="prev" title="Javascript(leetcode#15)  3Sum">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#15)  3Sum
+    <a href="/javascript/javascriptras/" rel="prev" title="前端login RSA加密">
+      <i class="fa fa-chevron-left"></i> 前端login RSA加密
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode/leetcode17/" rel="next" title="Javascript(leetcode#17) Letter Combinations of a Phone Number">
-      Javascript(leetcode#17) Letter Combinations of a Phone Number <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -385,7 +339,6 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -543,9 +496,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode16/";
-    this.page.identifier = "leetcode/leetcode16/";
-    this.page.title = "Javascript(leetcode#16)  3Sum Closest";
+    this.page.url = "https://qwer5656.github.io/datastructure/stack/";
+    this.page.identifier = "datastructure/stack/";
+    this.page.title = "stack";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
