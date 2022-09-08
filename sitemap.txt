@@ -123,6 +123,8 @@ https://qwer5656.github.io/tags/Javascript/
 https://qwer5656.github.io/tags/Thread/
 https://qwer5656.github.io/tags/Vue/
 https://qwer5656.github.io/tags/Pinia/
+https://qwer5656.github.io/tags/Ras%E5%8A%A0%E5%AF%86/
+https://qwer5656.github.io/tags/Login/
 https://qwer5656.github.io/categories/Hexo/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/C/Design-Pattern/
