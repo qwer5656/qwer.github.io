@@ -27,18 +27,22 @@ crossorigin="anonymous"></script>
 
 
 
-  <meta name="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+  <meta name="description" content="前言什麼是 Stack？stack是一種資料結構，資料像盤子一個一個往上疊，只能從最上面的開始拿取，採取先進後出的概念，即「Last In First Out」縮寫「LIFO」。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="stack">
+<meta property="og:title" content="資料結構堆疊(Stack)">
 <meta property="og:url" content="https://qwer5656.github.io/datastructure/stack/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+<meta property="og:description" content="前言什麼是 Stack？stack是一種資料結構，資料像盤子一個一個往上疊，只能從最上面的開始拿取，採取先進後出的概念，即「Last In First Out」縮寫「LIFO」。">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://qwer5656.github.io/image/javascript/Lifo_stack.png">
 <meta property="article:published_time" content="2022-09-08T06:48:11.000Z">
-<meta property="article:modified_time" content="2022-09-08T06:48:11.883Z">
+<meta property="article:modified_time" content="2022-09-08T08:50:47.396Z">
 <meta property="article:author" content="Neil">
-<meta property="article:tag" content="Javascript LeetCode C# Vue css html unit Test e2e Vuex">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="Stack">
+<meta property="article:tag" content="DataStructure">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qwer5656.github.io/image/javascript/Lifo_stack.png">
 
 <link rel="canonical" href="https://qwer5656.github.io/datastructure/stack/">
 
@@ -53,7 +57,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>stack | Neil coding之路</title>
+  <title>資料結構堆疊(Stack) | Neil coding之路</title>
   
 
 
@@ -129,7 +133,7 @@ crossorigin="anonymous"></script>
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">26</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">29</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -200,7 +204,7 @@ crossorigin="anonymous"></script>
     <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/datastructure/stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/image/avatar.jpg">
       <meta itemprop="name" content="Neil">
       <meta itemprop="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
     </span>
@@ -210,7 +214,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          stack
+          資料結構堆疊(Stack)
         </h1>
 
         <div class="post-meta">
@@ -219,8 +223,18 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2022-09-08 14:48:11" itemprop="dateCreated datePublished" datetime="2022-09-08T14:48:11+08:00">2022-09-08</time>
+              <time title="創建時間：2022-09-08 14:48:11 / 修改時間：16:50:47" itemprop="dateCreated datePublished" datetime="2022-09-08T14:48:11+08:00">2022-09-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+                </span>
             </span>
 
           
@@ -255,7 +269,21 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="什麼是-Stack？"><a href="#什麼是-Stack？" class="headerlink" title="什麼是 Stack？"></a>什麼是 Stack？</h1><p>stack是一種資料結構，資料像盤子一個一個往上疊，只能從最上面的開始拿取，採取先進後出的概念，即「Last In First Out」縮寫「LIFO」。</p>
+<span id="more"></span>
+
+
+<p><img src="/../image/javascript/Lifo_stack.png" alt="markdown" title="markdown"><br>source: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">Stack (abstract data type) - Wikipedia</a></p>
+<h1 id="應用"><a href="#應用" class="headerlink" title="應用"></a>應用</h1><p>Stack 的特性就是取得最新的資料，所以有這種需求的應用會適合用 stack 來處理，例如：</p>
+<p>1.瀏覽器的 call stack<br>2.Undo &#x2F; Redo 功能<br>3.歷史紀錄</p>
+<h1 id="Array-實作"><a href="#Array-實作" class="headerlink" title="Array 實作"></a>Array 實作</h1><p>JavaScript 有Array可以直接實作出stack的資料結構，push將資料堆疊，pop取出最後的資料</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">1</span>);</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">2</span>);</span><br><span class="line">arr.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br></pre></td></tr></table></figure>
+
+<h1 id="Object-Property-實作"><a href="#Object-Property-實作" class="headerlink" title="Object Property 實作"></a>Object Property 實作</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">val</span> = val;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">next</span> = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Stack</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">top</span> = <span class="literal">null</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">size</span> = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">push</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> node = <span class="keyword">new</span> <span class="title class_">Node</span>(val);</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">size</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">top</span> = node;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            node.<span class="property">next</span>=<span class="variable language_">this</span>.<span class="property">top</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">top</span>=node;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">size</span>++;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">pop</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">size</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">top</span>=<span class="variable language_">this</span>.<span class="property">top</span>.<span class="property">next</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">size</span>--;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> stack = <span class="keyword">new</span> <span class="title class_">Stack</span>();</span><br><span class="line">stack.<span class="title function_">push</span>(<span class="number">1</span>);</span><br><span class="line">stack.<span class="title function_">push</span>(<span class="number">2</span>);</span><br><span class="line">stack.<span class="title function_">push</span>(<span class="number">3</span>);</span><br><span class="line">stack.<span class="title function_">pop</span>();</span><br><span class="line">stack.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(stack);</span><br></pre></td></tr></table></figure>
+
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>1.以上程式碼利用javascript的Array和Object Property做出stack的資料結構</p>
+<p>2.堆疊常用在動態編成和遞迴中，不過要注意太多堆疊會造成overflow的錯誤</p>
+
     </div>
 
     
@@ -263,6 +291,11 @@ crossorigin="anonymous"></script>
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/Stack/" rel="tag"># Stack</a>
+              <a href="/tags/DataStructure/" rel="tag"># DataStructure</a>
+          </div>
 
         
 
@@ -339,11 +372,14 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Stack%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">什麼是 Stack？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%87%89%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">應用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-%E5%AF%A6%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">Array 實作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-Property-%E5%AF%A6%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">Object Property 實作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neil"
+      src="/image/avatar.jpg">
   <p class="site-author-name" itemprop="name">Neil</p>
   <div class="site-description" itemprop="description">做人如果沒夢想，那跟鹹魚有什麼分別？</div>
 </div>
@@ -365,11 +401,22 @@ crossorigin="anonymous"></script>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/qwer5656" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qwer5656" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wangdaois18@yahoo.com.tw" title="E-Mail → mailto:wangdaois18@yahoo.com.tw" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yuzong.lai" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;yuzong.lai" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
 
 
 
@@ -498,7 +545,7 @@ crossorigin="anonymous"></script>
   var disqus_config = function() {
     this.page.url = "https://qwer5656.github.io/datastructure/stack/";
     this.page.identifier = "datastructure/stack/";
-    this.page.title = "stack";
+    this.page.title = "資料結構堆疊(Stack)";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

@@ -126,6 +126,9 @@ https://qwer5656.github.io/tags/Vue/
 https://qwer5656.github.io/tags/Pinia/
 https://qwer5656.github.io/tags/Login/
 https://qwer5656.github.io/tags/RSA%E5%8A%A0%E5%AF%86/
+https://qwer5656.github.io/tags/javascript/
+https://qwer5656.github.io/tags/Stack/
+https://qwer5656.github.io/tags/DataStructure/
 https://qwer5656.github.io/categories/Hexo/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/C/Design-Pattern/

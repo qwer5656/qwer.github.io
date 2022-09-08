@@ -1101,6 +1101,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://qwer5656.github.io/tags/javascript/</loc>
+    <lastmod>2022-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://qwer5656.github.io/tags/Stack/</loc>
+    <lastmod>2022-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://qwer5656.github.io/tags/DataStructure/</loc>
+    <lastmod>2022-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
