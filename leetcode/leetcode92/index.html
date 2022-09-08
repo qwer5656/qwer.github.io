@@ -27,21 +27,23 @@ crossorigin="anonymous"></script>
 
 
 
-  <meta name="description" content="Difficult:Medium 題目A permutation of an array of integers is an arrangement of its members into a sequence or linear order. For example, for arr &#x3D; [1,2,3], the following are considered permutation">
+  <meta name="description" content="Difficult:Medium 題目Given the head of a singly linked list and two integers left and right where left &lt;&#x3D; right, reverse the nodes of the list from position left to position right, and return th">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#31) Next Permutation">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode31/index.html">
+<meta property="og:title" content="Javascript(leetcode#92)  Reverse Linked List II">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode92/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Medium 題目A permutation of an array of integers is an arrangement of its members into a sequence or linear order. For example, for arr &#x3D; [1,2,3], the following are considered permutation">
+<meta property="og:description" content="Difficult:Medium 題目Given the head of a singly linked list and two integers left and right where left &lt;&#x3D; right, reverse the nodes of the list from position left to position right, and return th">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-08-05T01:20:08.000Z">
-<meta property="article:modified_time" content="2022-08-30T05:55:39.217Z">
+<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode92.jpg">
+<meta property="article:published_time" content="2022-09-08T00:41:22.000Z">
+<meta property="article:modified_time" content="2022-09-08T03:31:50.589Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qwer5656.github.io/image/leetcode/leetcode92.jpg">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode31/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode92/">
 
 
 <script id="page-configurations">
@@ -54,7 +56,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#31) Next Permutation | Neil coding之路</title>
+  <title>Javascript(leetcode#92)  Reverse Linked List II | Neil coding之路</title>
   
 
 
@@ -198,7 +200,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode31/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -211,7 +213,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#31) Next Permutation
+          Javascript(leetcode#92)  Reverse Linked List II
         </h1>
 
         <div class="post-meta">
@@ -220,16 +222,10 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2022-08-05 09:20:08" itemprop="dateCreated datePublished" datetime="2022-08-05T09:20:08+08:00">2022-08-05</time>
+              <time title="創建時間：2022-09-08 08:41:22 / 修改時間：11:31:50" itemprop="dateCreated datePublished" datetime="2022-09-08T08:41:22+08:00">2022-09-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-08-30 13:55:39" itemprop="dateModified" datetime="2022-08-30T13:55:39+08:00">2022-08-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -260,8 +256,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode31/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode31/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode92/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode92/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -277,28 +273,18 @@ crossorigin="anonymous"></script>
 
       
         <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>A permutation of an array of integers is an arrangement of its members into a sequence or linear order.</p>
-<p>For example, for arr &#x3D; [1,2,3], the following are considered permutations of arr: [1,2,3], [1,3,2], [3,1,2], [2,3,1].<br>The next permutation of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the next permutation of that array is the permutation that follows it in the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).</p>
-<p>For example, the next permutation of arr &#x3D; [1,2,3] is [1,3,2].<br>Similarly, the next permutation of arr &#x3D; [2,3,1] is [3,1,2].<br>While the next permutation of arr &#x3D; [3,2,1] is [1,2,3] because [3,2,1] does not have a lexicographical larger rearrangement.<br>Given an array of integers nums, find the next permutation of nums.</p>
-<p>The replacement must be in place and use only constant extra memory.</p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given the head of a singly linked list and two integers left and right where left &lt;&#x3D; right, reverse the nodes of the list from position left to position right, and return the reversed list.</p>
 <span id="more"></span>
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>整數數組的排列是將其成員排列成序列或線性順序。</p>
-<p>例如，對於 arr &#x3D; [1,2,3]，以下被認為是 arr 的排列：[1,2,3], [1,3,2], [3,1,2], [2,3,1]。<br>整數數組的下一個排列是其整數的下一個字典序更大的排列。更正式地說，如果數組的所有排列都根據它們的字典順序在一個容器中排序，那麼該數組的下一個排列是在排序容器中跟隨它的排列。如果這種排列是不可能的，則必須將數組重新排列為盡可能低的順序（即按升序排序）。</p>
-<p>例如，arr &#x3D; [1,2,3] 的下一個排列是 [1,3,2]。<br>類似地，arr &#x3D; [2,3,1] 的下一個排列是 [3,1,2]。<br>而 arr &#x3D; [3,2,1] 的下一個排列是 [1,2,3] 因為 [3,2,1] 沒有更大的字典重排。<br>給定一個整數數組 nums，找到 nums 的下一個排列。</p>
-<p>替換必須就位並且僅使用恆定的額外內存。</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;barfoothefoobarman&quot;, words = [&quot;foo&quot;,&quot;bar&quot;]</span><br><span class="line">Output: [0,9]</span><br><span class="line">Explanation: Substrings starting at index 0 and 9 are &quot;barfoo&quot; and &quot;foobar&quot; respectively.</span><br><span class="line">The output order does not matter, returning [9,0] is fine too.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定單鍊錶的頭部和左右兩個整數，其中left &lt;&#x3D; right，將列表的節點從左到右反轉，並返回反轉後的列表。</p>
+<p>Example 1:<br><img src="/../image/leetcode/leetcode92.jpg" alt="example" title="example"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [1,2,3,4,5], left = 2, right = 4</span><br><span class="line">Output: [1,4,3,2,5]</span><br></pre></td></tr></table></figure>
 
 <p>Example 2:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;wordgoodgoodgoodbestword&quot;, words = [&quot;word&quot;,&quot;good&quot;,&quot;best&quot;,&quot;word&quot;]</span><br><span class="line">Output: []</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>Example 3:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;barfoofoobarthefoobarman&quot;, words = [&quot;bar&quot;,&quot;foo&quot;,&quot;the&quot;]</span><br><span class="line">Output: [6,9,12]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [5], left = 1, right = 1</span><br><span class="line">Output: [5]</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.從最後跟前面比較，若比前面大時將前面的數字給為較大它一點的值<br>2.將後面的值從小到最大依序填入</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Code 1 :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nextPermutation = <span class="keyword">function</span> (<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> curpos = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = nums.<span class="property">length</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        arr.<span class="title function_">push</span>(nums[i]);</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &gt; nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            curpos = i - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    arr = arr.<span class="title function_">sort</span>(<span class="keyword">function</span> (<span class="params">a, b</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> a - b;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[curpos] &lt; arr[i]) &#123;</span><br><span class="line">            <span class="keyword">let</span> temp = arr[i];</span><br><span class="line">            arr[i] = nums[curpos];</span><br><span class="line">            nums[curpos] = temp;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    arr = arr.<span class="title function_">sort</span>(<span class="keyword">function</span> (<span class="params">a, b</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> a - b;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        nums[i + curpos + <span class="number">1</span>] = arr[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> nums;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.反轉N個元素</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverseBetween = <span class="keyword">function</span>(<span class="params">head, left, right</span>) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> headnode = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>, head); </span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> curnode = headnode;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; right)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i &lt; left-<span class="number">1</span>)&#123;curnode = curnode.<span class="property">next</span>;&#125; </span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i == left - <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> start = curnode; <span class="comment">// start reverse 2</span></span><br><span class="line">            curnode = curnode.<span class="property">next</span>; </span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &gt;= left)&#123;</span><br><span class="line">            <span class="keyword">var</span> last = curnode.<span class="property">next</span>; </span><br><span class="line">            curnode.<span class="property">next</span> = curnode.<span class="property">next</span>.<span class="property">next</span>; </span><br><span class="line">            last.<span class="property">next</span> = start.<span class="property">next</span>; </span><br><span class="line">            start.<span class="property">next</span> = last; <span class="comment">// do not go to the next as the next has been move to the front</span></span><br><span class="line">        &#125;        </span><br><span class="line">        i++; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> headnode.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -317,13 +303,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode30/" rel="prev" title="Javascript(leetcode#30)  Substring with Concatenation of All Words">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#30)  Substring with Concatenation of All Words
+    <a href="/vue/vue-pinia/" rel="prev" title="Vue_Pinia(簡易使用)">
+      <i class="fa fa-chevron-left"></i> Vue_Pinia(簡易使用)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode/leetcode32/" rel="next" title="Javascript(leetcode#32) Longest Valid Parentheses">
-      Javascript(leetcode#32) Longest Valid Parentheses <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -389,7 +372,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">4.</span> <span class="nav-text">Solution</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -547,9 +530,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode31/";
-    this.page.identifier = "leetcode/leetcode31/";
-    this.page.title = "Javascript(leetcode#31) Next Permutation";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode92/";
+    this.page.identifier = "leetcode/leetcode92/";
+    this.page.title = "Javascript(leetcode#92)  Reverse Linked List II";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
