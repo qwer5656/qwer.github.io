@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4614349675508012"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"qwer5656.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"disqus":{"text":"Load Disqus","order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+<meta name="google-site-verification" content="Dltoh42ZhcA7DgcnVwBEPB-rDzL-jidqoWwLoLs6eAA" />
+
+
+
+
+  <meta name="description" content="前言由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端login Ras加密">
+<meta property="og:url" content="https://qwer5656.github.io/javascript/javascriptras/index.html">
+<meta property="og:site_name" content="Neil coding之路">
+<meta property="og:description" content="前言由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://qwer5656.github.io/image/javascript/stmmetric.png">
+<meta property="og:image" content="https://qwer5656.github.io/image/javascript/publictoprivate.png">
+<meta property="og:image" content="https://qwer5656.github.io/image/javascript/result.png">
+<meta property="article:published_time" content="2022-09-08T05:39:48.000Z">
+<meta property="article:modified_time" content="2022-09-08T06:30:37.312Z">
+<meta property="article:author" content="Neil">
+<meta property="article:tag" content="Javascript LeetCode C# Vue css html unit Test e2e Vuex">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qwer5656.github.io/image/javascript/stmmetric.png">
+
+<link rel="canonical" href="https://qwer5656.github.io/javascript/javascriptras/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>前端login Ras加密 | Neil coding之路</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Neil coding之路</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Have a nice day</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">96</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/javascript/javascriptras/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil coding之路">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端login Ras加密
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-09-08 13:39:48 / 修改時間：14:30:37" itemprop="dateCreated datePublished" datetime="2022-09-08T13:39:48+08:00">2022-09-08</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/javascript/javascriptras/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="javascript/javascriptras/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。</p>
+<span id="more"></span>
+<h1 id="傳統加密"><a href="#傳統加密" class="headerlink" title="傳統加密"></a>傳統加密</h1><p>在傳統的加密算法中，通信的雙方會採用一個共享的密鑰進行加密和解密，前端進行加密後傳給後端，後端接收後進行解密，由於加密和解密採用的密鑰是相同的，這種算法又稱為對稱加密<br>如下圖所示：<br><img src="/../image/javascript/stmmetric.png" alt="result" title="result"><br>圖片來源：<a target="_blank" rel="noopener" href="https://www.twilio.com/blog/what-is-public-key-cryptography">twillo</a><br>非對稱加密算法中，通信的雙方會採用一個公鑰和一個私鑰進行加密和解密，由於前端的資訊不安全通常只放公鑰在前端進行加密，在由後端利用私鑰進行解密<br>如下圖所示：<br><img src="/../image/javascript/publictoprivate.png" alt="result" title="result"><br>圖片來源：<a target="_blank" rel="noopener" href="https://www.twilio.com/blog/what-is-public-key-cryptography">twillo</a></p>
+<h1 id="RSA加密與解密"><a href="#RSA加密與解密" class="headerlink" title="RSA加密與解密"></a>RSA加密與解密</h1><p>1.使用公钥加密的数据,利用私钥进行解密<br>2.使用私钥加密的数据,利用公钥进行解密</p>
+<h1 id="RSA秘钥生成方式"><a href="#RSA秘钥生成方式" class="headerlink" title="RSA秘钥生成方式"></a>RSA秘钥生成方式</h1><p>Mac系統內置OpenSSL(開源加密庫),所以可以直接在終端上使用命令。<br>Windows系統可以使用git命令行工具<br>單擊鼠標右鍵——git bash here 調出git bash<br>生成私鑰，密鑰長度為1024bit</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ openssl genrsa -out private.pem 1024</span><br><span class="line">Generating RSA private key, 1024 bit long modulus (2 primes)</span><br><span class="line">...+++++</span><br><span class="line">.............................+++++</span><br><span class="line">e is 65537 (0x010001)</span><br></pre></td></tr></table></figure>
+<p>從私鑰中提取公鑰</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ openssl rsa -in private.pem -pubout -out public.pem</span><br><span class="line">writing RSA key</span><br></pre></td></tr></table></figure>
+<p>這樣就生成了private.pem 和 public.pem兩個文件</p>
+<h1 id="jsencrypt介绍"><a href="#jsencrypt介绍" class="headerlink" title="jsencrypt介绍"></a>jsencrypt介绍</h1><p>jsencrypt是一個基於rsa加解密的js庫</p>
+<p>安裝</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jsencrypt </span><br></pre></td></tr></table></figure>
+
+<h1 id="vue環境下的程式碼"><a href="#vue環境下的程式碼" class="headerlink" title="vue環境下的程式碼"></a>vue環境下的程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  </span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> <span class="title class_">JSEncrypt</span> <span class="keyword">from</span> <span class="string">&#x27;jsencrypt&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">name</span>: <span class="string">&#x27;HelloWorld&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">let</span> content=<span class="string">&quot;要加密的内容&quot;</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加密前:&quot;</span>+content);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> encryptor = <span class="keyword">new</span> <span class="title class_">JSEncrypt</span>() </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> pubKey = <span class="string">`MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4oPAzFTGWT8MZMKDNw9BBaOOL</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">LQeRsBAA8KmqCDB8l5SWpae+nG5D73bz7cbOY/JgdCGD31ZX8mtvlKslJLQ7Y2BJ</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">GZkObJSxryVRy7PoVohQuX/63QtdXivmsIQNo2PjZzjiljTkEiQrP27WmgBIDo0D</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">B9MEOtgwa2nxwbywwwIDAQAB`</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    encryptor.<span class="title function_">setPublicKey</span>(pubKey)<span class="comment">//設置公鑰</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> rsaPassWord = encryptor.<span class="title function_">encrypt</span>(content);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加密內容:&quot;</span>+rsaPassWord);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> decrypt = <span class="keyword">new</span> <span class="title class_">JSEncrypt</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> priKey = <span class="string">`MIICWwIBAAKBgQD4oPAzFTGWT8MZMKDNw9BBaOOLLQeRsBAA8KmqCDB8l5SWpae+</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">nG5D73bz7cbOY/JgdCGD31ZX8mtvlKslJLQ7Y2BJGZkObJSxryVRy7PoVohQuX/6</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">3QtdXivmsIQNo2PjZzjiljTkEiQrP27WmgBIDo0DB9MEOtgwa2nxwbywwwIDAQAB</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">AoGAAnZNiqP2Fr/5daFmpkL/J/aq8jDi901gCzJW68ki+cjifs9rJtcTvHZ9nhLH</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">ujmBJ/Vec5jdmQdciwFU5IxFgKAPF+YDeaQEnEBvWoIdJ8Yv66HkS+xOeesNobrc</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">46uaDSWFdbCypTlE9KgvYm/8mLOOEHNp19UsgEjdKwiT1tkCQQD+RlZU5mUXG5zA</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">TK0MAsLr8CrxgoZ6ifd0HfXXknKY+eiiOVDwbpAAP/6Zb/MCVk17QHttPYCHLuNO</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">aQIrVXPFAkEA+lDLR+dClOGBY8KTmloEJa990XwlppacI9J2xDAdBDZnzp7YMUdY</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">cUc2D0xZyCsWhZXlS5PW7Lmv+hz7hX3y5wJAS/DL1d1dcbJQdWoxAHZOqtJ2sNxv</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">t2c/HVHZW4GkciWpIdIGZ1hN75UtP7wckqUdzOKsOir1GOqa/o8EE9cYlQJAeaJl</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">BW2k9v+Vhkp4uxpexYk/VFpFWWv6N5X/zFms3+0oCEk7uMZ4faMi69AoGJKHgSZT</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">o6QVXjblAl6vAjEvpQJAGDiLg173MOTcLDAy+7yMGGKDfumHCdTkN1hH79gbICgd</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">bn5i62SpyiHRzh+tL2DSxCYbLW5KOU6CoxRfw/o55A==`</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    decrypt.<span class="title function_">setPrivateKey</span>(priKey)<span class="comment">//設置私鑰</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> uncrypted = decrypt.<span class="title function_">decrypt</span>(rsaPassWord)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;解密:&quot;</span>+uncrypted);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="result"><a href="#result" class="headerlink" title="result"></a>result</h1><p><img src="/../image/javascript/result.png" alt="result" title="result"></p>
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>1.RAS與一般對稱加密安全許多</p>
+<p>2.NIST建議的RSA密鑰長度為至少2048位元[8]。</p>
+<p>3.比起AES、3DES和其它對稱演算法來說，RSA要慢得多。實際的運用（如TLS）一般結合了對稱加密（如AES）和非對稱加密（如RSA）兩者。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/leetcode/leetcode92/" rel="prev" title="Javascript(leetcode#92)  Reverse Linked List II">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#92)  Reverse Linked List II
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%82%B3%E7%B5%B1%E5%8A%A0%E5%AF%86"><span class="nav-number">2.</span> <span class="nav-text">傳統加密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E5%8A%A0%E5%AF%86%E8%88%87%E8%A7%A3%E5%AF%86"><span class="nav-number">3.</span> <span class="nav-text">RSA加密與解密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E7%A7%98%E9%92%A5%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">RSA秘钥生成方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsencrypt%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">jsencrypt介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue%E7%92%B0%E5%A2%83%E4%B8%8B%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">6.</span> <span class="nav-text">vue環境下的程式碼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#result"><span class="nav-number">7.</span> <span class="nav-text">result</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">8.</span> <span class="nav-text">結語</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Neil</p>
+  <div class="site-description" itemprop="description">做人如果沒夢想，那跟鹹魚有什麼分別？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div><script color="0,0,0" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4614349675508012"
+     data-ad-slot="5458416367"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://Neil.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://qwer5656.github.io/javascript/javascriptras/";
+    this.page.identifier = "javascript/javascriptras/";
+    this.page.title = "前端login Ras加密";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://Neil.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
