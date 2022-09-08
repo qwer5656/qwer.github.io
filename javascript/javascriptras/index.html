@@ -27,23 +27,23 @@ crossorigin="anonymous"></script>
 
 
 
-  <meta name="description" content="前言由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
+  <meta name="description" content="前言由於前端資訊不安全，需透過RSA加密方式將密碼傳給後端並進行解密，RSA是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端login Ras加密">
+<meta property="og:title" content="前端login RSA加密">
 <meta property="og:url" content="https://qwer5656.github.io/javascript/javascriptras/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="前言由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
+<meta property="og:description" content="前言由於前端資訊不安全，需透過RSA加密方式將密碼傳給後端並進行解密，RSA是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://qwer5656.github.io/image/javascript/stmmetric.png">
 <meta property="og:image" content="https://qwer5656.github.io/image/javascript/publictoprivate.png">
 <meta property="og:image" content="https://qwer5656.github.io/image/javascript/result.png">
 <meta property="article:published_time" content="2022-09-08T05:39:48.000Z">
-<meta property="article:modified_time" content="2022-09-08T06:33:38.826Z">
+<meta property="article:modified_time" content="2022-09-08T06:37:52.383Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Vue">
-<meta property="article:tag" content="Ras加密">
 <meta property="article:tag" content="Login">
+<meta property="article:tag" content="RSA加密">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://qwer5656.github.io/image/javascript/stmmetric.png">
 
@@ -60,7 +60,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>前端login Ras加密 | Neil coding之路</title>
+  <title>前端login RSA加密 | Neil coding之路</title>
   
 
 
@@ -217,7 +217,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          前端login Ras加密
+          前端login RSA加密
         </h1>
 
         <div class="post-meta">
@@ -228,7 +228,7 @@ crossorigin="anonymous"></script>
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2022-09-08 13:39:48 / 修改時間：14:33:38" itemprop="dateCreated datePublished" datetime="2022-09-08T13:39:48+08:00">2022-09-08</time>
+              <time title="創建時間：2022-09-08 13:39:48 / 修改時間：14:37:52" itemprop="dateCreated datePublished" datetime="2022-09-08T13:39:48+08:00">2022-09-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,11 +272,11 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由於前端資訊不安全，需透過Ras加密方式將密碼傳給後端並進行解密，RAS是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由於前端資訊不安全，需透過RSA加密方式將密碼傳給後端並進行解密，RSA是一種非對稱加密演算法，在公開金鑰加密和電子商業中被廣泛使用。</p>
 <span id="more"></span>
 <h1 id="傳統加密"><a href="#傳統加密" class="headerlink" title="傳統加密"></a>傳統加密</h1><p>在傳統的加密算法中，通信的雙方會採用一個共享的密鑰進行加密和解密，前端進行加密後傳給後端，後端接收後進行解密，由於加密和解密採用的密鑰是相同的，這種算法又稱為對稱加密<br>如下圖所示：<br><img src="/../image/javascript/stmmetric.png" alt="result" title="result"><br>圖片來源：<a target="_blank" rel="noopener" href="https://www.twilio.com/blog/what-is-public-key-cryptography">twillo</a><br>非對稱加密算法中，通信的雙方會採用一個公鑰和一個私鑰進行加密和解密，由於前端的資訊不安全通常只放公鑰在前端進行加密，在由後端利用私鑰進行解密<br>如下圖所示：<br><img src="/../image/javascript/publictoprivate.png" alt="result" title="result"><br>圖片來源：<a target="_blank" rel="noopener" href="https://www.twilio.com/blog/what-is-public-key-cryptography">twillo</a></p>
-<h1 id="RSA加密與解密"><a href="#RSA加密與解密" class="headerlink" title="RSA加密與解密"></a>RSA加密與解密</h1><p>1.使用公钥加密的数据,利用私钥进行解密<br>2.使用私钥加密的数据,利用公钥进行解密</p>
-<h1 id="RSA秘钥生成方式"><a href="#RSA秘钥生成方式" class="headerlink" title="RSA秘钥生成方式"></a>RSA秘钥生成方式</h1><p>Mac系統內置OpenSSL(開源加密庫),所以可以直接在終端上使用命令。<br>Windows系統可以使用git命令行工具<br>單擊鼠標右鍵——git bash here 調出git bash<br>生成私鑰，密鑰長度為1024bit</p>
+<h1 id="RSA加密與解密"><a href="#RSA加密與解密" class="headerlink" title="RSA加密與解密"></a>RSA加密與解密</h1><p>1.使用公鑰加密的數據,利用私鑰進行解密<br>2.使用私鑰加密的數據,利用公鑰進行解密</p>
+<h1 id="RSA秘鑰生成方式"><a href="#RSA秘鑰生成方式" class="headerlink" title="RSA秘鑰生成方式"></a>RSA秘鑰生成方式</h1><p>Mac系統內置OpenSSL(開源加密庫),所以可以直接在終端上使用命令。<br>Windows系統可以使用git命令行工具<br>單擊鼠標右鍵——git bash here 調出git bash<br>生成私鑰，密鑰長度為1024bit</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ openssl genrsa -out private.pem 1024</span><br><span class="line">Generating RSA private key, 1024 bit long modulus (2 primes)</span><br><span class="line">...+++++</span><br><span class="line">.............................+++++</span><br><span class="line">e is 65537 (0x010001)</span><br></pre></td></tr></table></figure>
 <p>從私鑰中提取公鑰</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ openssl rsa -in private.pem -pubout -out public.pem</span><br><span class="line">writing RSA key</span><br></pre></td></tr></table></figure>
@@ -288,7 +288,7 @@ crossorigin="anonymous"></script>
 <h1 id="vue環境下的程式碼"><a href="#vue環境下的程式碼" class="headerlink" title="vue環境下的程式碼"></a>vue環境下的程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  </span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> <span class="title class_">JSEncrypt</span> <span class="keyword">from</span> <span class="string">&#x27;jsencrypt&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">name</span>: <span class="string">&#x27;HelloWorld&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">let</span> content=<span class="string">&quot;要加密的内容&quot;</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加密前:&quot;</span>+content);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> encryptor = <span class="keyword">new</span> <span class="title class_">JSEncrypt</span>() </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> pubKey = <span class="string">`MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4oPAzFTGWT8MZMKDNw9BBaOOL</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">LQeRsBAA8KmqCDB8l5SWpae+nG5D73bz7cbOY/JgdCGD31ZX8mtvlKslJLQ7Y2BJ</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">GZkObJSxryVRy7PoVohQuX/63QtdXivmsIQNo2PjZzjiljTkEiQrP27WmgBIDo0D</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">B9MEOtgwa2nxwbywwwIDAQAB`</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    encryptor.<span class="title function_">setPublicKey</span>(pubKey)<span class="comment">//設置公鑰</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> rsaPassWord = encryptor.<span class="title function_">encrypt</span>(content);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加密內容:&quot;</span>+rsaPassWord);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> decrypt = <span class="keyword">new</span> <span class="title class_">JSEncrypt</span>()</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> priKey = <span class="string">`MIICWwIBAAKBgQD4oPAzFTGWT8MZMKDNw9BBaOOLLQeRsBAA8KmqCDB8l5SWpae+</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">nG5D73bz7cbOY/JgdCGD31ZX8mtvlKslJLQ7Y2BJGZkObJSxryVRy7PoVohQuX/6</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">3QtdXivmsIQNo2PjZzjiljTkEiQrP27WmgBIDo0DB9MEOtgwa2nxwbywwwIDAQAB</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">AoGAAnZNiqP2Fr/5daFmpkL/J/aq8jDi901gCzJW68ki+cjifs9rJtcTvHZ9nhLH</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">ujmBJ/Vec5jdmQdciwFU5IxFgKAPF+YDeaQEnEBvWoIdJ8Yv66HkS+xOeesNobrc</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">46uaDSWFdbCypTlE9KgvYm/8mLOOEHNp19UsgEjdKwiT1tkCQQD+RlZU5mUXG5zA</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">TK0MAsLr8CrxgoZ6ifd0HfXXknKY+eiiOVDwbpAAP/6Zb/MCVk17QHttPYCHLuNO</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">aQIrVXPFAkEA+lDLR+dClOGBY8KTmloEJa990XwlppacI9J2xDAdBDZnzp7YMUdY</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">cUc2D0xZyCsWhZXlS5PW7Lmv+hz7hX3y5wJAS/DL1d1dcbJQdWoxAHZOqtJ2sNxv</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">t2c/HVHZW4GkciWpIdIGZ1hN75UtP7wckqUdzOKsOir1GOqa/o8EE9cYlQJAeaJl</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">BW2k9v+Vhkp4uxpexYk/VFpFWWv6N5X/zFms3+0oCEk7uMZ4faMi69AoGJKHgSZT</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">o6QVXjblAl6vAjEvpQJAGDiLg173MOTcLDAy+7yMGGKDfumHCdTkN1hH79gbICgd</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript"><span class="language-xml">bn5i62SpyiHRzh+tL2DSxCYbLW5KOU6CoxRfw/o55A==`</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    decrypt.<span class="title function_">setPrivateKey</span>(priKey)<span class="comment">//設置私鑰</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">var</span> uncrypted = decrypt.<span class="title function_">decrypt</span>(rsaPassWord)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;解密:&quot;</span>+uncrypted);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <h1 id="result"><a href="#result" class="headerlink" title="result"></a>result</h1><p><img src="/../image/javascript/result.png" alt="result" title="result"></p>
-<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>1.RAS與一般對稱加密安全許多</p>
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>1.RSA與一般對稱加密安全許多</p>
 <p>2.NIST建議的RSA密鑰長度為至少2048位元[8]。</p>
 <p>3.比起AES、3DES和其它對稱演算法來說，RSA要慢得多。實際的運用（如TLS）一般結合了對稱加密（如AES）和非對稱加密（如RSA）兩者。</p>
 
@@ -302,8 +302,8 @@ crossorigin="anonymous"></script>
           <div class="post-tags">
               <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
               <a href="/tags/Vue/" rel="tag"># Vue</a>
-              <a href="/tags/Ras%E5%8A%A0%E5%AF%86/" rel="tag"># Ras加密</a>
               <a href="/tags/Login/" rel="tag"># Login</a>
+              <a href="/tags/RSA%E5%8A%A0%E5%AF%86/" rel="tag"># RSA加密</a>
           </div>
 
         
@@ -381,7 +381,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%82%B3%E7%B5%B1%E5%8A%A0%E5%AF%86"><span class="nav-number">2.</span> <span class="nav-text">傳統加密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E5%8A%A0%E5%AF%86%E8%88%87%E8%A7%A3%E5%AF%86"><span class="nav-number">3.</span> <span class="nav-text">RSA加密與解密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E7%A7%98%E9%92%A5%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">RSA秘钥生成方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsencrypt%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">jsencrypt介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue%E7%92%B0%E5%A2%83%E4%B8%8B%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">6.</span> <span class="nav-text">vue環境下的程式碼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#result"><span class="nav-number">7.</span> <span class="nav-text">result</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">8.</span> <span class="nav-text">結語</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%82%B3%E7%B5%B1%E5%8A%A0%E5%AF%86"><span class="nav-number">2.</span> <span class="nav-text">傳統加密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E5%8A%A0%E5%AF%86%E8%88%87%E8%A7%A3%E5%AF%86"><span class="nav-number">3.</span> <span class="nav-text">RSA加密與解密</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA%E7%A7%98%E9%91%B0%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">RSA秘鑰生成方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsencrypt%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">jsencrypt介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue%E7%92%B0%E5%A2%83%E4%B8%8B%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">6.</span> <span class="nav-text">vue環境下的程式碼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#result"><span class="nav-number">7.</span> <span class="nav-text">result</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">8.</span> <span class="nav-text">結語</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -541,7 +541,7 @@ crossorigin="anonymous"></script>
   var disqus_config = function() {
     this.page.url = "https://qwer5656.github.io/javascript/javascriptras/";
     this.page.identifier = "javascript/javascriptras/";
-    this.page.title = "前端login Ras加密";
+    this.page.title = "前端login RSA加密";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
