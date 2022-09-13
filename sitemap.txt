@@ -1,3 +1,6 @@
+https://qwer5656.github.io/designpattern/designpattern-factory-3/
+https://qwer5656.github.io/designpattern/designpattern-factory-2/
+https://qwer5656.github.io/designpattern/designpattern-builder/
 https://qwer5656.github.io/leetcode/leetcode94/
 https://qwer5656.github.io/datastructure/queue/
 https://qwer5656.github.io/datastructure/stack/
@@ -92,10 +95,7 @@ https://qwer5656.github.io/leetcode/leetcode51/
 https://qwer5656.github.io/hexo/hexoandgithub/
 https://qwer5656.github.io/c_/C-getweatherapi/
 https://qwer5656.github.io/c_/C-Qrcodemake/
-https://qwer5656.github.io/designpattern/designpattern-builder/
 https://qwer5656.github.io/designpattern/designpattern-factory-1/
-https://qwer5656.github.io/designpattern/designpattern-factory-2/
-https://qwer5656.github.io/designpattern/designpattern-factory-3/
 https://qwer5656.github.io/designpattern/designpattern-singlemode/
 https://qwer5656.github.io/javascript/javascriptHoisting/
 https://qwer5656.github.io/css/csslinear-gradient/
