@@ -1,6 +1,6 @@
+https://qwer5656.github.io/designpattern/designpattern-builder/
 https://qwer5656.github.io/designpattern/designpattern-factory-3/
 https://qwer5656.github.io/designpattern/designpattern-factory-2/
-https://qwer5656.github.io/designpattern/designpattern-builder/
 https://qwer5656.github.io/leetcode/leetcode94/
 https://qwer5656.github.io/datastructure/queue/
 https://qwer5656.github.io/datastructure/stack/
