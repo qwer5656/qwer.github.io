@@ -27,18 +27,24 @@ crossorigin="anonymous"></script>
 
 
 
-  <meta name="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Neil coding之路">
-<meta property="og:url" content="https://qwer5656.github.io/archives/page/5/index.html">
+  <meta name="description" content="Difficult:Medium 題目Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows: The left subtree of a node contains only nodes with keys les">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript(leetcode#98)  Validate Binary Search Tree">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode98/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+<meta property="og:description" content="Difficult:Medium 題目Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows: The left subtree of a node contains only nodes with keys les">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_1.jpg">
+<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_2.jpg">
+<meta property="article:published_time" content="2022-09-14T07:41:30.000Z">
+<meta property="article:modified_time" content="2022-09-14T08:47:03.929Z">
 <meta property="article:author" content="Neil">
-<meta property="article:tag" content="Javascript LeetCode C# Vue css html unit Test e2e Vuex">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_1.jpg">
 
-<link rel="canonical" href="https://qwer5656.github.io/archives/page/5/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode98/">
 
 
 <script id="page-configurations">
@@ -46,12 +52,12 @@ crossorigin="anonymous"></script>
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>歸檔 | Neil coding之路</title>
+  <title>Javascript(leetcode#98)  Validate Binary Search Tree | Neil coding之路</title>
   
 
 
@@ -188,240 +194,144 @@ crossorigin="anonymous"></script>
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/avatar.jpg">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil coding之路">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Javascript(leetcode#98)  Validate Binary Search Tree
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-09-14 15:41:30 / 修改時間：16:47:03" itemprop="dateCreated datePublished" datetime="2022-09-14T15:41:30+08:00">2022-09-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">很好! 目前共有 102 篇文章。 繼續努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/leetcode/leetcode98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode98/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <p><strong>Difficult:Medium</strong></p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given the root of a binary tree, determine if it is a valid binary search tree (BST).</p>
+<p>A valid BST is defined as follows:</p>
+<p>The left subtree of a node contains only nodes with keys less than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>Both the left and right subtrees must also be binary search trees.</p>
+<span id="more"></span>
+
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定二叉樹的根，確定它是否是有效的二叉搜索樹 (BST)。</p>
+<p>有效的 BST 定義如下：</p>
+<p>節點的左子樹僅包含鍵小於節點鍵的節點。<br>節點的右子樹只包含鍵大於節點鍵的節點。<br>左右子樹也必須是二叉搜索樹。</p>
+<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:<br><img src="/../image/leetcode/leetcode98_1.jpg" alt="example" title="example"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [2,1,3]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:<br><img src="/../image/leetcode/leetcode98_2.jpg" alt="example" title="example"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [5,1,4,null,null,3,6]</span><br><span class="line">Output: false</span><br><span class="line">Explanation: The root node&#x27;s value is 5 but its right child&#x27;s value is 4.</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.利用動態規劃<br>2.已知條件1.左邊比中間小及右邊比中間大</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isValidBST = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="title function_">isValidBSTHelper</span>(root, -<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">isValidBSTHelper</span> = (<span class="params">root, low, high</span>) =&gt; &#123;</span><br><span class="line">   <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> root.<span class="property">val</span> &gt; low &amp;&amp; root.<span class="property">val</span> &lt; high &amp;&amp;</span><br><span class="line">       <span class="title function_">isValidBSTHelper</span>(root.<span class="property">left</span>, low, root.<span class="property">val</span>) &amp;&amp;</span><br><span class="line">       <span class="title function_">isValidBSTHelper</span>(root.<span class="property">right</span>, root.<span class="property">val</span>, high);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-17T08:55:36+08:00"
-              content="2022-08-17">
-          08-17
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+              <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode61/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#61) Rotate List</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T16:06:05+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/designpattern/designpattern-factory-1/" itemprop="url">
-            <span itemprop="name">設計模式 Design Pattern (一) 工廠模式(Factory Pattern)_簡單工廠模式</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T11:19:17+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode60/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#60)  Permutation Sequence</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T10:36:52+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode59/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#59) Spiral Matrix II</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T10:28:55+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode58/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#58) Length of Last Word</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T09:54:42+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode57/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#57) Insert Interval</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-16T09:00:24+08:00"
-              content="2022-08-16">
-          08-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode56/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#56) Merge Intervals</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-15T13:51:24+08:00"
-              content="2022-08-15">
-          08-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode55/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#55) Jump Game</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-15T11:34:01+08:00"
-              content="2022-08-15">
-          08-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode54/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#54) Spiral Matrix</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-15T10:16:13+08:00"
-              content="2022-08-15">
-          08-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/leetcode/leetcode53/" itemprop="url">
-            <span itemprop="name">Javascript(leetcode#53) Maximum Subarray</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/leetcode/leetcode97/" rel="prev" title="Javascript(leetcode#97)  Interleaving String">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#97)  Interleaving String
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/4/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/11/">11</a><a class="extend next" rel="next" href="/archives/page/6/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -468,6 +378,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -635,6 +546,26 @@ crossorigin="anonymous"></script>
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode98/";
+    this.page.identifier = "leetcode/leetcode98/";
+    this.page.title = "Javascript(leetcode#98)  Validate Binary Search Tree";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://Neil.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>
