@@ -1,3 +1,5 @@
+https://qwer5656.github.io/leetcode/leetcode101/
+https://qwer5656.github.io/leetcode/leetcode100/
 https://qwer5656.github.io/leetcode/leetcode98/
 https://qwer5656.github.io/leetcode/leetcode97/
 https://qwer5656.github.io/c_/threadpool/
