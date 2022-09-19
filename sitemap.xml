@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://qwer5656.github.io/designpattern/solid/</loc>
+    
+    <lastmod>2022-09-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://qwer5656.github.io/leetcode/leetcode103/</loc>
     
     <lastmod>2022-09-19</lastmod>
@@ -11,16 +20,7 @@
   </url>
   
   <url>
-    <loc>https://qwer5656.github.io/leetcode104/</loc>
-    
-    <lastmod>2022-09-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://qwer5656.github.io/designpattern/solid/</loc>
+    <loc>https://qwer5656.github.io/leetcode/leetcode104/</loc>
     
     <lastmod>2022-09-19</lastmod>
     
@@ -1260,6 +1260,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://qwer5656.github.io/tags/Solid/</loc>
+    <lastmod>2022-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1327,6 +1334,13 @@
   
   <url>
     <loc>https://qwer5656.github.io/categories/Vue/</loc>
+    <lastmod>2022-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://qwer5656.github.io/categories/C/Solid/</loc>
     <lastmod>2022-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

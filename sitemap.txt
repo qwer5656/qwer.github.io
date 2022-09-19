@@ -1,6 +1,6 @@
-https://qwer5656.github.io/leetcode/leetcode103/
-https://qwer5656.github.io/leetcode104/
 https://qwer5656.github.io/designpattern/solid/
+https://qwer5656.github.io/leetcode/leetcode103/
+https://qwer5656.github.io/leetcode/leetcode104/
 https://qwer5656.github.io/leetcode/leetcode102/
 https://qwer5656.github.io/javascript/snack/
 https://qwer5656.github.io/javascript/maze/
@@ -145,6 +145,7 @@ https://qwer5656.github.io/tags/Queue/
 https://qwer5656.github.io/tags/Data-Structure/
 https://qwer5656.github.io/tags/MAZE/
 https://qwer5656.github.io/tags/Sanck/
+https://qwer5656.github.io/tags/Solid/
 https://qwer5656.github.io/categories/Hexo/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/C/Design-Pattern/
@@ -155,3 +156,4 @@ https://qwer5656.github.io/categories/Leetcode/Leetcode-Hard/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Easy/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Medium/
 https://qwer5656.github.io/categories/Vue/
+https://qwer5656.github.io/categories/C/Solid/
