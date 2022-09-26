@@ -1,4 +1,5 @@
 https://qwer5656.github.io/leetcode/leetcode107/
+https://qwer5656.github.io/datastructure/linklist/
 https://qwer5656.github.io/css/cssflex/
 https://qwer5656.github.io/leetcode/leetcode105/
 https://qwer5656.github.io/leetcode/leetcode104/
@@ -150,6 +151,7 @@ https://qwer5656.github.io/tags/MAZE/
 https://qwer5656.github.io/tags/Sanck/
 https://qwer5656.github.io/tags/Pinia/
 https://qwer5656.github.io/tags/Flex/
+https://qwer5656.github.io/tags/LinkedList/
 https://qwer5656.github.io/categories/Leetcode/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Medium/
