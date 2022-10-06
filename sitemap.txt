@@ -1,3 +1,5 @@
+https://qwer5656.github.io/leetcode/leetcode136/
+https://qwer5656.github.io/javascript/snack/
 https://qwer5656.github.io/leetcode/leetcode134/
 https://qwer5656.github.io/leetcode/leetcode125/
 https://qwer5656.github.io/leetcode/leetcode130/
@@ -15,7 +17,6 @@ https://qwer5656.github.io/leetcode/leetcode103/
 https://qwer5656.github.io/designpattern/designpattern-factory-1/
 https://qwer5656.github.io/designpattern/solid/
 https://qwer5656.github.io/leetcode/leetcode102/
-https://qwer5656.github.io/javascript/snack/
 https://qwer5656.github.io/javascript/maze/
 https://qwer5656.github.io/leetcode/leetcode101/
 https://qwer5656.github.io/leetcode/leetcode100/
@@ -162,6 +163,8 @@ https://qwer5656.github.io/tags/Flex/
 https://qwer5656.github.io/tags/LinkedList/
 https://qwer5656.github.io/tags/Docker/
 https://qwer5656.github.io/tags/VirtualBox/
+https://qwer5656.github.io/tags/Canvas/
+https://qwer5656.github.io/tags/Game/
 https://qwer5656.github.io/categories/Leetcode/
 https://qwer5656.github.io/categories/C/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Medium/
@@ -174,3 +177,4 @@ https://qwer5656.github.io/categories/Leetcode/Leetcode-Easy/
 https://qwer5656.github.io/categories/Leetcode/Leetcode-Hard/
 https://qwer5656.github.io/categories/Vue/
 https://qwer5656.github.io/categories/Docker/
+https://qwer5656.github.io/categories/JavaScript/Game/
