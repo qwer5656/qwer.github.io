@@ -24,7 +24,15 @@ crossorigin="anonymous"></script>
 
 <meta name="google-site-verification" content="Dltoh42ZhcA7DgcnVwBEPB-rDzL-jidqoWwLoLs6eAA" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-YED3XYFWGE');
+</script>
 
 
   <meta name="description" content="前言線程池是在多線程應用程式初始化期間創建線程集合的過程，然後在需要時將這些線程重用於新任務，而不是創建新線程。然後，每個進程都有一些固定數量的線程，具體取決於可用的內存量，這些線程是應用程式的需要，但我們可以自由地增加線程數。池中的每個線程都有一個特定的給定任務。線程返回到池，並在給定任務完成後等待下一個分配。 通常，當我們創建了許多線程來執行許多任務時，線程池是必需的，在此佇列中組織。通常，我">
@@ -59,6 +67,15 @@ crossorigin="anonymous"></script>
 
   <title>Thread Pooling(執行緒池) | Neil coding之路</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YED3XYFWGE');
+      }
+    </script>
 
 
 
