@@ -120,7 +120,6 @@ https://qwer5656.github.io/leetcode/leetcode78/
 https://qwer5656.github.io/leetcode/leetcode79/
 https://qwer5656.github.io/leetcode/leetcode8/
 https://qwer5656.github.io/leetcode/leetcode9/
-https://qwer5656.github.io/technicalconcept/ObjectOriented/
 https://qwer5656.github.io/google1e508d5459bf0947.html
 https://qwer5656.github.io/categories/index.html
 https://qwer5656.github.io/tags/index.html
