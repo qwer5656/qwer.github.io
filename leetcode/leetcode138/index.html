@@ -35,24 +35,21 @@ crossorigin="anonymous"></script>
 </script>
 
 
-  <meta name="description" content="Difficult:Easy 題目Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).">
+  <meta name="description" content="Difficult:Medium 題目A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null. Construct a deep copy of the list.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode101)  Symmetric Tree">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode101/index.html">
+<meta property="og:title" content="Javascript(leetcode#138) Copy List with Random Pointer">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode138/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Easy 題目Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).">
+<meta property="og:description" content="Difficult:Medium 題目A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null. Construct a deep copy of the list.">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode101_1.jpg">
-<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode101_2.jpg">
-<meta property="article:published_time" content="2022-09-15T02:49:24.000Z">
-<meta property="article:modified_time" content="2022-09-15T02:59:42.000Z">
+<meta property="article:published_time" content="2022-10-11T00:46:35.000Z">
+<meta property="article:modified_time" content="2022-10-12T02:14:42.384Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qwer5656.github.io/image/leetcode/leetcode101_1.jpg">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode101/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode138/">
 
 
 <script id="page-configurations">
@@ -65,7 +62,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode101)  Symmetric Tree | Neil coding之路</title>
+  <title>Javascript(leetcode#138) Copy List with Random Pointer | Neil coding之路</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
     <script>
@@ -218,7 +215,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode101/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode138/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/image/avatar.jpg">
@@ -231,7 +228,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode101)  Symmetric Tree
+          Javascript(leetcode#138) Copy List with Random Pointer
         </h1>
 
         <div class="post-meta">
@@ -240,10 +237,16 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2022-09-15 10:49:24 / 修改時間：10:59:42" itemprop="dateCreated datePublished" datetime="2022-09-15T10:49:24+08:00">2022-09-15</time>
+              <time title="創建時間：2022-10-11 08:46:35" itemprop="dateCreated datePublished" datetime="2022-10-11T08:46:35+08:00">2022-10-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-10-12 10:14:42" itemprop="dateModified" datetime="2022-10-12T10:14:42+08:00">2022-10-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -254,7 +257,7 @@ crossorigin="anonymous"></script>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Leetcode-Easy/" itemprop="url" rel="index"><span itemprop="name">Leetcode Easy</span></a>
+                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
                 </span>
             </span>
 
@@ -274,8 +277,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode101/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode101/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode138/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode138/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -290,19 +293,34 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Difficult:Easy</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).</p>
+        <p><strong>Difficult:Medium</strong></p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.</p>
+<p>Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.</p>
+<p>For example, if there are two nodes X and Y in the original list, where X.random –&gt; Y, then for the corresponding two nodes x and y in the copied list, x.random –&gt; y.</p>
+<p>Return the head of the copied linked list.</p>
+<p>The linked list is represented in the input&#x2F;output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:</p>
+<p>val: an integer representing Node.val<br>random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.<br>Your code will only be given the head of the original linked list.</p>
 <span id="more"></span>
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定二叉樹的根，檢查它是否是自身的鏡像（即圍繞其中心對稱）。</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:<br><img src="/../image/leetcode/leetcode101_1.jpg" alt="example" title="example"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [1,2,2,3,4,4,3]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
 
-<p>Example 2:<br><img src="/../image/leetcode/leetcode101_2.jpg" alt="example" title="example"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [1,2,2,null,3,null,3]</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定一個長度為 n 的鍊錶，使得每個節點都包含一個額外的隨機指針，該指針可以指向列表中的任何節點，或者為空。</p>
+<p>構造列表的深層副本。深拷貝應該由恰好 n 個全新節點組成，其中每個新節點的值都設置為其對應的原始節點的值。新節點的 next 和 random 指針都應該指向複製列表中的新節點，以便原始列表和復制列表中的指針表示相同的列表狀態。新列表中的任何指針都不應指向原始列表中的節點。</p>
+<p>例如，如果原始列表中有兩個節點 X 和 Y，其中 X.random –&gt; Y，那麼對於復制的列表中對應的兩個節點 x 和 y，x.random –&gt; y。</p>
+<p>返回複製的鍊錶的頭部。</p>
+<p>鍊錶在輸入&#x2F;輸出中表示為 n 個節點的列表。每個節點都表示為一對 [val, random_index] 其中：</p>
+<p>val：表示Node.val的整數<br>random_index：隨機指針指向的節點的索引（範圍從0到n-1），如果它不指向任何節點，則為null。<br>您的代碼只會被賦予原始鍊錶的頭部。</p>
+<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]</span><br><span class="line">Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [[1,1],[2,1]]</span><br><span class="line">Output: [[1,1],[2,1]]</span><br></pre></td></tr></table></figure>
+
+<p>Example 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [[3,null],[3,0],[3,null]]</span><br><span class="line">Output: [[3,null],[3,0],[3,null]]</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.利用動態規劃<br>2.分析if條件</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isSymmetric = <span class="keyword">function</span> (<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> dp = <span class="keyword">function</span> (<span class="params">left, right</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (left == <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (left != <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (left == <span class="literal">null</span> &amp;&amp; right != <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> left.<span class="property">val</span> == right.<span class="property">val</span> &amp;&amp; <span class="title function_">dp</span>(left.<span class="property">left</span>, right.<span class="property">right</span>) &amp;&amp; <span class="title function_">dp</span>(left.<span class="property">right</span>, right.<span class="property">left</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">dp</span>(root.<span class="property">left</span>, root.<span class="property">right</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.用一個map將結點存入<br>2.結果重複時，回傳有的節點</p>
+<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> copyRandomList = <span class="keyword">function</span> (<span class="params">head, clonemap = <span class="keyword">new</span> <span class="built_in">Map</span>()</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (clonemap.<span class="title function_">has</span>(head)) &#123;</span><br><span class="line">        <span class="keyword">return</span> clonemap.<span class="title function_">get</span>(head);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> node = <span class="keyword">new</span> <span class="title class_">Node</span>(head.<span class="property">val</span>, <span class="literal">null</span>, <span class="literal">null</span>);</span><br><span class="line">    clonemap.<span class="title function_">set</span>(head, node);</span><br><span class="line">    node.<span class="property">next</span> = <span class="title function_">copyRandomList</span>(head.<span class="property">next</span>, clonemap);</span><br><span class="line">    node.<span class="property">random</span> = <span class="title function_">copyRandomList</span>(head.<span class="property">random</span>, clonemap);</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -321,13 +339,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode100/" rel="prev" title="Javascript(leetcode100)   Same Tree">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode100)   Same Tree
+    <a href="/leetcode/leetcode137/" rel="prev" title="Javascript(leetcode#137) Single Number II">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#137) Single Number II
     </a></div>
-      <div class="post-nav-item">
-    <a href="/javascript/maze/" rel="next" title="前端撰寫老鼠走迷宮">
-      前端撰寫老鼠走迷宮 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -393,7 +408,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">5.</span> <span class="nav-text">程式碼</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -564,9 +579,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode101/";
-    this.page.identifier = "leetcode/leetcode101/";
-    this.page.title = "Javascript(leetcode101)  Symmetric Tree";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode138/";
+    this.page.identifier = "leetcode/leetcode138/";
+    this.page.title = "Javascript(leetcode#138) Copy List with Random Pointer";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
