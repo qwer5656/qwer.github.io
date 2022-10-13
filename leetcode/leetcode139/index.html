@@ -35,21 +35,21 @@ crossorigin="anonymous"></script>
 </script>
 
 
-  <meta name="description" content="Difficult:Easy 題目Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string “”.">
+  <meta name="description" content="Difficult:Medium 前言Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words. Note that the same word in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#14)  Longest Common Prefix">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode14/index.html">
+<meta property="og:title" content="Javascript(leetcode#139) Word Break">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode139/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Easy 題目Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string “”.">
+<meta property="og:description" content="Difficult:Medium 前言Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words. Note that the same word in">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-08-01T07:10:06.000Z">
-<meta property="article:modified_time" content="2022-08-30T05:55:40.000Z">
+<meta property="article:published_time" content="2022-10-13T03:22:44.000Z">
+<meta property="article:modified_time" content="2022-10-13T03:18:13.518Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode14/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode139/">
 
 
 <script id="page-configurations">
@@ -62,7 +62,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#14)  Longest Common Prefix | Neil coding之路</title>
+  <title>Javascript(leetcode#139) Word Break | Neil coding之路</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
     <script>
@@ -215,7 +215,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode14/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode139/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/image/avatar.jpg">
@@ -228,7 +228,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#14)  Longest Common Prefix
+          Javascript(leetcode#139) Word Break
         </h1>
 
         <div class="post-meta">
@@ -237,16 +237,10 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2022-08-01 15:10:06" itemprop="dateCreated datePublished" datetime="2022-08-01T15:10:06+08:00">2022-08-01</time>
+              <time title="創建時間：2022-10-13 11:22:44 / 修改時間：11:18:13" itemprop="dateCreated datePublished" datetime="2022-10-13T11:22:44+08:00">2022-10-13</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-08-30 13:55:40" itemprop="dateModified" datetime="2022-08-30T13:55:40+08:00">2022-08-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -257,7 +251,7 @@ crossorigin="anonymous"></script>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Leetcode-Easy/" itemprop="url" rel="index"><span itemprop="name">Leetcode Easy</span></a>
+                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
                 </span>
             </span>
 
@@ -277,8 +271,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode14/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode14/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode139/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode139/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -293,27 +287,26 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Difficult:Easy</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Write a function to find the longest common prefix string amongst an array of strings.</p>
-<p>If there is no common prefix, return an empty string “”.</p>
-<span id="more"></span>
+        <p><strong>Difficult:Medium</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p>Note that the same word in the dictionary may be reused multiple times in the segmentation.</p>
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定一個字符串 s 和一個字符串字典 wordDict，如果 s 可以分割成一個或多個字典單詞的空格分隔序列，則返回 true。</p>
+<p>請注意，字典中的同一個詞可能會在分詞中重複使用多次。</p>
+<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Exampele 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;,&quot;code&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Return true because &quot;leetcode&quot; can be segmented as &quot;leet code&quot;.</span><br></pre></td></tr></table></figure>
 
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>編寫一個函數來查找字符串數組中最長的公共前綴字符串。</p>
-<p>如果沒有公共前綴，則返回一個空字符串””</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br><span class="line">Output: &quot;fl&quot;</span><br></pre></td></tr></table></figure>
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;applepenapple&quot;, wordDict = [&quot;apple&quot;,&quot;pen&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation: Return true because &quot;applepenapple&quot; can be segmented as &quot;apple pen apple&quot;.</span><br><span class="line">Note that you are allowed to reuse a dictionary word.</span><br></pre></td></tr></table></figure>
 
-<p>Example 2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]</span><br><span class="line">Output: &quot;&quot;</span><br><span class="line">Explanation: There is no common prefix among the input strings.</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.從第一個陣列第一個字比對後面的陣列</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Code 1 :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longestCommonPrefix = <span class="keyword">function</span> (<span class="params">strs</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (strs.<span class="property">length</span> &lt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">let</span> first = strs[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">let</span> checkstr = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">let</span> len = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; first.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> str = first[i];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> y = <span class="number">0</span>; y &lt; strs.<span class="property">length</span>; y++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (str != strs[y][i]) &#123;</span><br><span class="line">                checkstr = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (checkstr == <span class="literal">false</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        len += str;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Example 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;,&quot;dog&quot;,&quot;sand&quot;,&quot;and&quot;,&quot;cat&quot;]</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
 
 
-
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><ol>
+<li>str為空和set有值時回傳true</li>
+<li>map有值返回map裡面的值</li>
+</ol>
+<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wordBreak = <span class="keyword">function</span>(<span class="params">s, wordDict</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>(wordDict);</span><br><span class="line">    <span class="keyword">const</span> dp  = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">solve</span> = (<span class="params">str = s</span>) =&gt; &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(str);</span><br><span class="line">        <span class="keyword">if</span>(str == <span class="string">&#x27;&#x27;</span> || set.<span class="title function_">has</span>(str)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(dp.<span class="title function_">has</span>(str)) <span class="keyword">return</span> dp.<span class="title function_">get</span>(str);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">let</span> temp = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str.<span class="property">length</span>; i++) &#123;</span><br><span class="line">            temp += str[i];</span><br><span class="line">            <span class="keyword">if</span>(set.<span class="title function_">has</span>(temp)) &#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="title function_">solve</span>(str.<span class="title function_">slice</span>(i + <span class="number">1</span>))) &#123;</span><br><span class="line">                    dp.<span class="title function_">set</span>(str, <span class="literal">true</span>);</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        dp.<span class="title function_">set</span>(str, <span class="literal">false</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">solve</span>();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -332,13 +325,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode13/" rel="prev" title="Javascript(leetcode#13)  Roman to Integer">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#13)  Roman to Integer
+    <a href="/leetcode/leetcode138/" rel="prev" title="Javascript(leetcode#138) Copy List with Random Pointer">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#138) Copy List with Random Pointer
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode/leetcode15/" rel="next" title="Javascript(leetcode#15)  3Sum">
-      Javascript(leetcode#15)  3Sum <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -404,7 +394,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">5.</span> <span class="nav-text">程式碼</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -575,9 +565,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode14/";
-    this.page.identifier = "leetcode/leetcode14/";
-    this.page.title = "Javascript(leetcode#14)  Longest Common Prefix";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode139/";
+    this.page.identifier = "leetcode/leetcode139/";
+    this.page.title = "Javascript(leetcode#139) Word Break";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
