@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://qwer5656.github.io/designpattern/designpattern-singlemode/</loc>
+    
+    <lastmod>2022-10-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://qwer5656.github.io/designpattern/designpattern-prototype/</loc>
     
     <lastmod>2022-10-20</lastmod>
@@ -390,15 +399,6 @@
   
   <url>
     <loc>https://qwer5656.github.io/javascript/javascriptras/</loc>
-    
-    <lastmod>2022-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://qwer5656.github.io/designpattern/designpattern-singlemode/</loc>
     
     <lastmod>2022-09-13</lastmod>
     
