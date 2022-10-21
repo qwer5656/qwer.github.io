@@ -1,3 +1,5 @@
+https://qwer5656.github.io/leetcode/leetcode152/
+https://qwer5656.github.io/leetcode/leetcode151/
 https://qwer5656.github.io/designpattern/designpattern-singlemode/
 https://qwer5656.github.io/designpattern/designpattern-prototype/
 https://qwer5656.github.io/leetcode/leetcode150/
