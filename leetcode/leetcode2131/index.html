@@ -35,23 +35,21 @@ crossorigin="anonymous"></script>
 </script>
 
 
-  <meta name="description" content="Difficult:Medium 題目Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.">
+  <meta name="description" content="Difficult:Medium 題目You are given an array of strings words. Each element of words consists of two lowercase English letters. Create the longest possible palindrome by selecting some elements from word">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#59) Spiral Matrix II">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode59/index.html">
+<meta property="og:title" content="Javascript(leetcode#2131) Longest Palindrome by Concatenating Two Letter Words">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode2131/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Medium 題目Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.">
+<meta property="og:description" content="Difficult:Medium 題目You are given an array of strings words. Each element of words consists of two lowercase English letters. Create the longest possible palindrome by selecting some elements from word">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode59.jpg">
-<meta property="article:published_time" content="2022-08-16T02:36:52.000Z">
-<meta property="article:modified_time" content="2022-08-30T05:55:40.000Z">
+<meta property="article:published_time" content="2022-11-03T02:33:10.000Z">
+<meta property="article:modified_time" content="2022-11-03T02:36:22.475Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qwer5656.github.io/image/leetcode/leetcode59.jpg">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode59/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode2131/">
 
 
 <script id="page-configurations">
@@ -64,7 +62,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#59) Spiral Matrix II | Neil coding之路</title>
+  <title>Javascript(leetcode#2131) Longest Palindrome by Concatenating Two Letter Words | Neil coding之路</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
     <script>
@@ -217,7 +215,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode59/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode2131/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/image/avatar.jpg">
@@ -230,7 +228,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#59) Spiral Matrix II
+          Javascript(leetcode#2131) Longest Palindrome by Concatenating Two Letter Words
         </h1>
 
         <div class="post-meta">
@@ -239,16 +237,10 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2022-08-16 10:36:52" itemprop="dateCreated datePublished" datetime="2022-08-16T10:36:52+08:00">2022-08-16</time>
+              <time title="創建時間：2022-11-03 10:33:10 / 修改時間：10:36:22" itemprop="dateCreated datePublished" datetime="2022-11-03T10:33:10+08:00">2022-11-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-08-30 13:55:40" itemprop="dateModified" datetime="2022-08-30T13:55:40+08:00">2022-08-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -279,8 +271,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode59/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode59/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode2131/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode2131/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -296,17 +288,36 @@ crossorigin="anonymous"></script>
 
       
         <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.</p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>You are given an array of strings words. Each element of words consists of two lowercase English letters.</p>
+<p>Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once.</p>
+<p>Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0.</p>
+<p>A palindrome is a string that reads the same forward and backward.</p>
 <span id="more"></span>
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定一個正整數 n，生成一個 n x n 矩陣，其中以螺旋順序填充從 1 到 n2 的元素。</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1<br><img src="/../image/leetcode/leetcode59.jpg" alt="Example" title="Example"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 3</span><br><span class="line">Output: [[1,2,3],[8,9,4],[7,6,5]]</span><br></pre></td></tr></table></figure>
 
-<p>Example 2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 1</span><br><span class="line">Output: [[1]]</span><br></pre></td></tr></table></figure>
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.先建立好n*n的矩陣<br>2.自訂4個方向，依序填入數字</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Code 1 :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> generateMatrix = <span class="keyword">function</span> (<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    arr.<span class="title function_">push</span>(<span class="title class_">Array</span>(n).<span class="title function_">fill</span>(<span class="number">0</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> count = n * n;</span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> dir = <span class="string">&quot;right&quot;</span>;</span><br><span class="line">  <span class="keyword">while</span> (num &lt;= count) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dir == <span class="string">&quot;right&quot;</span>) &#123;</span><br><span class="line">      arr[i][j] = num;</span><br><span class="line">      j++;</span><br><span class="line">      <span class="keyword">if</span> (j &gt;= n || arr[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        dir = <span class="string">&quot;down&quot;</span>;</span><br><span class="line">        j = j - <span class="number">1</span>;</span><br><span class="line">        i++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (dir == <span class="string">&quot;down&quot;</span>) &#123;</span><br><span class="line">      arr[i][j] = num;</span><br><span class="line">      i++;</span><br><span class="line">      <span class="keyword">if</span> (i &gt;= n || arr[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        i = i - <span class="number">1</span>;</span><br><span class="line">        dir = <span class="string">&quot;left&quot;</span>;</span><br><span class="line">        j--;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (dir == <span class="string">&quot;left&quot;</span>) &#123;</span><br><span class="line">      arr[i][j] = num;</span><br><span class="line">      j--;</span><br><span class="line">      <span class="keyword">if</span> (j &lt; <span class="number">0</span> || arr[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        j = j + <span class="number">1</span>;</span><br><span class="line">        dir = <span class="string">&quot;top&quot;</span>;</span><br><span class="line">        i--;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (dir == <span class="string">&quot;top&quot;</span>) &#123;</span><br><span class="line"></span><br><span class="line">      arr[i][j] = num;</span><br><span class="line">      i--;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (i &lt; <span class="number">0</span> || arr[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">        i = i + <span class="number">1</span>;</span><br><span class="line">        dir = <span class="string">&quot;right&quot;</span>;</span><br><span class="line">        j++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    num++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給你一個字符串單詞數組。單詞的每個元素由兩個小寫英文字母組成。</p>
+<p>通過從單詞中選擇一些元素並以任意順序連接它們來創建可能的最長回文。每個元素最多可以選擇一次。</p>
+<p>返回您可以創建的最長回文的長度。如果不可能創建任何回文，則返回 0。</p>
+<p>回文是一個向前和向後讀取相同的字符串。</p>
+<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;lc&quot;,&quot;cl&quot;,&quot;gg&quot;]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: One longest palindrome is &quot;lc&quot; + &quot;gg&quot; + &quot;cl&quot; = &quot;lcggcl&quot;, of length 6.</span><br><span class="line">Note that &quot;clgglc&quot; is another longest palindrome that can be created.</span><br></pre></td></tr></table></figure>
+
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;ab&quot;,&quot;ty&quot;,&quot;yt&quot;,&quot;lc&quot;,&quot;cl&quot;,&quot;ab&quot;]</span><br><span class="line">Output: 8</span><br><span class="line">Explanation: One longest palindrome is &quot;ty&quot; + &quot;lc&quot; + &quot;cl&quot; + &quot;yt&quot; = &quot;tylcclyt&quot;, of length 8.</span><br><span class="line">Note that &quot;lcyttycl&quot; is another longest palindrome that can be created.</span><br></pre></td></tr></table></figure>
+
+
+<p>Example 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;cc&quot;,&quot;ll&quot;,&quot;xx&quot;]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: One longest palindrome is &quot;cc&quot;, of length 2.</span><br><span class="line">Note that &quot;ll&quot; is another longest palindrome that can be created, and so is &quot;xx&quot;.</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><ol>
+<li>設一個stack存疊字的英文</li>
+<li>obj存回文的字串判斷是否有相對應的回文</li>
+<li>sum計算他們的總和</li>
+</ol>
+<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longestPalindrome = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> stack = [];</span><br><span class="line">    <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> check = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> val = words[i];</span><br><span class="line">        <span class="keyword">if</span> (!obj[val]) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val[<span class="number">0</span>] === val[<span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (stack.<span class="title function_">indexOf</span>(val) != -<span class="number">1</span>) &#123;</span><br><span class="line">                    stack.<span class="title function_">splice</span>(stack.<span class="title function_">indexOf</span>(val), <span class="number">1</span>);</span><br><span class="line">                    sum += <span class="number">4</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    stack.<span class="title function_">push</span>(val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> str = val[<span class="number">1</span>] + val[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">if</span> (obj[str]) &#123;</span><br><span class="line">                    obj[str].<span class="property">num</span>++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    obj[str] = &#123;</span><br><span class="line">                        val,</span><br><span class="line">                        <span class="attr">num</span>: <span class="number">1</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj[val].<span class="property">num</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                sum += <span class="number">4</span>;</span><br><span class="line">                check += <span class="number">4</span>;</span><br><span class="line">                obj[val].<span class="property">num</span>--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> str = val[<span class="number">1</span>] + val[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">if</span> (obj[str]) &#123;</span><br><span class="line">                    obj[str].<span class="property">num</span>++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    obj[str] = &#123;</span><br><span class="line">                        val,</span><br><span class="line">                        <span class="attr">num</span>: <span class="number">1</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (stack.<span class="property">length</span> != <span class="number">0</span>) &#123;</span><br><span class="line">        sum += <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -325,13 +336,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode58/" rel="prev" title="Javascript(leetcode#58) Length of Last Word">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#58) Length of Last Word
+    <a href="/leetcode/leetcode168/" rel="prev" title="Javascript(leetcode#168) Excel Sheet Column Title">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#168) Excel Sheet Column Title
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode/leetcode60/" rel="next" title="Javascript(leetcode#60)  Permutation Sequence">
-      Javascript(leetcode#60)  Permutation Sequence <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -397,7 +405,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">5.</span> <span class="nav-text">程式碼</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -568,9 +576,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode59/";
-    this.page.identifier = "leetcode/leetcode59/";
-    this.page.title = "Javascript(leetcode#59) Spiral Matrix II";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode2131/";
+    this.page.identifier = "leetcode/leetcode2131/";
+    this.page.title = "Javascript(leetcode#2131) Longest Palindrome by Concatenating Two Letter Words";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
