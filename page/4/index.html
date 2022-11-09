@@ -154,7 +154,7 @@ crossorigin="anonymous"></script>
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">147</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">148</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -207,6 +207,100 @@ crossorigin="anonymous"></script>
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/designpattern/designpattern-prototype/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/avatar.jpg">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil coding之路">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/designpattern/designpattern-prototype/" class="post-title-link" itemprop="url">設計模式 Design Pattern (五) 原型模式(Prototype Pattern)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-10-20 15:26:05 / 修改時間：11:35:34" itemprop="dateCreated datePublished" datetime="2022-10-20T15:26:05+08:00">2022-10-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/Design-Pattern/" itemprop="url" rel="index"><span itemprop="name">Design Pattern</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/designpattern/designpattern-prototype/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="designpattern/designpattern-prototype/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一、原型模式的作用？<br>1、基本就是你需要從A的實例得到一份與A內容相同，但是又互不干擾的實例的話，就需要使用原型模式。<br>2、用原型實例指定創建對象的種類，並且通過拷貝這些原型創建新的對象。這個其實和C++的拷貝構造函數的作用是相似的（但不相同），實際上就是動態抽取 當前對象 運行時 的 狀態。<br>3、當然有的時候，如果我們並不需要基於現有的對象複製新的對象，或者我們需要的就是一個乾淨的空對象，那麼我的首先還是工廠模式或者抽象工廠模式。</p>
+<p>二、為什麼需要原型模式？<br>1、為什麼不用new直接新建對象，而要用原型模式？<br>首先，用new新建對像不能獲取當前對象運行時的狀態，其次就算new了新對象，在將當前對象的值複製給新對象，效率也不如原型模式高。<br>2、為什麼不直接使用拷貝構造函數，而要使用原型模式？<br>原型模式與拷貝構造函數是不同的概念，拷貝構造函數涉及的類是已知的，原型模式涉及的類可以是未知的（基類的拷貝構造函數只能複制得到基類的對象）。<br>原型模式生成的新對象可能是一個派生類。拷貝構造函數生成的新對像只能是類本身。原型模式是描述了一個通用方法(或概念)，它不管是如何實現的，而拷貝構造則是描述了一個具體實現方法。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/designpattern/designpattern-prototype/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -589,105 +683,6 @@ crossorigin="anonymous"></script>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode143/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/avatar.jpg">
-      <meta itemprop="name" content="Neil">
-      <meta itemprop="description" content="做人如果沒夢想，那跟鹹魚有什麼分別？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil coding之路">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/leetcode/leetcode143/" class="post-title-link" itemprop="url">Javascript(leetcode#143)  Reorder List</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2022-10-17 09:58:01 / 修改時間：13:14:15" itemprop="dateCreated datePublished" datetime="2022-10-17T09:58:01+08:00">2022-10-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/leetcode/leetcode143/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode143/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>You are given the head of a singly linked-list. The list can be represented as:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L0 → L1 → … → Ln - 1 → Ln</span><br></pre></td></tr></table></figure>
-
-<p>Reorder the list to be on the following form:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …</span><br></pre></td></tr></table></figure>
-<p>You may not modify the values in the list’s nodes. Only nodes themselves may be changed.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/leetcode/leetcode143/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -759,7 +754,7 @@ crossorigin="anonymous"></script>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">148</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
