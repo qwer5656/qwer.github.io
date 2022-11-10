@@ -35,21 +35,21 @@ crossorigin="anonymous"></script>
 </script>
 
 
-  <meta name="description" content="Difficult:Medium 題目Design an algorithm that collects daily price quotes for some stock and returns the span of that stock’s price for the current day. The span of the stock’s price today is defined as">
+  <meta name="description" content="Difficult:Medium 題目You are playing the Bulls and Cows game with your friend. You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#901) Longest Palindrome by Concatenating Two Letter Words">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode901/index.html">
+<meta property="og:title" content="Javascript(leetcode#299) Bulls and Cows">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode299/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Medium 題目Design an algorithm that collects daily price quotes for some stock and returns the span of that stock’s price for the current day. The span of the stock’s price today is defined as">
+<meta property="og:description" content="Difficult:Medium 題目You are playing the Bulls and Cows game with your friend. You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-11-09T01:12:09.000Z">
-<meta property="article:modified_time" content="2022-11-09T01:17:18.212Z">
+<meta property="article:published_time" content="2022-11-10T01:38:45.000Z">
+<meta property="article:modified_time" content="2022-11-10T01:40:28.599Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode901/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode299/">
 
 
 <script id="page-configurations">
@@ -62,7 +62,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#901) Longest Palindrome by Concatenating Two Letter Words | Neil coding之路</title>
+  <title>Javascript(leetcode#299) Bulls and Cows | Neil coding之路</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
     <script>
@@ -157,7 +157,7 @@ crossorigin="anonymous"></script>
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">148</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">150</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -215,7 +215,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode901/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode299/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/image/avatar.jpg">
@@ -228,7 +228,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#901) Longest Palindrome by Concatenating Two Letter Words
+          Javascript(leetcode#299) Bulls and Cows
         </h1>
 
         <div class="post-meta">
@@ -239,7 +239,7 @@ crossorigin="anonymous"></script>
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2022-11-09 09:12:09 / 修改時間：09:17:18" itemprop="dateCreated datePublished" datetime="2022-11-09T09:12:09+08:00">2022-11-09</time>
+              <time title="創建時間：2022-11-10 09:38:45 / 修改時間：09:40:28" itemprop="dateCreated datePublished" datetime="2022-11-10T09:38:45+08:00">2022-11-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -271,8 +271,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode901/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode901/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode299/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode299/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -288,28 +288,33 @@ crossorigin="anonymous"></script>
 
       
         <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Design an algorithm that collects daily price quotes for some stock and returns the span of that stock’s price for the current day.</p>
-<p>The span of the stock’s price today is defined as the maximum number of consecutive days (starting from today and going backward) for which the stock price was less than or equal to today’s price.</p>
-<p>For example, if the price of a stock over the next 7 days were [100,80,60,70,60,75,85], then the stock spans would be [1,1,1,2,1,4,6].<br>Implement the StockSpanner class:</p>
-<p>StockSpanner() Initializes the object of the class.<br>int next(int price) Returns the span of the stock’s price given that today’s price is price.</p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>You are playing the Bulls and Cows game with your friend.</p>
+<p>You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info:</p>
+<p>The number of “bulls”, which are digits in the guess that are in the correct position.<br>The number of “cows”, which are digits in the guess that are in your secret number but are located in the wrong position. Specifically, the non-bull digits in the guess that could be rearranged such that they become bulls.<br>Given the secret number secret and your friend’s guess guess, return the hint for your friend’s guess.</p>
+<p>The hint should be formatted as “xAyB”, where x is the number of bulls and y is the number of cows. Note that both secret and guess may contain duplicate digits.</p>
 <span id="more"></span>
 
 
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>設計一種算法，收集某隻股票的每日報價並返回該股票當天價格的跨度。</p>
-<p>今天股票價格的跨度定義為股票價格小於或等於今天價格的最大連續天數（從今天開始向後）。</p>
-<p>例如，如果未來 7 天的股票價格為 [100,80,60,70,60,75,85]，則股票跨度將為 [1,1,1,2,1,4, 6]。<br>實現 StockSpanner 類：</p>
-<p>StockSpanner() 初始化類的對象。<br>int next(int price) 假設今天的價格是價格，則返回股票價格的跨度。</p>
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>你正在和你的朋友玩公牛和奶牛的遊戲。</p>
+<p>你寫下一個秘密號碼，讓你的朋友猜猜這個號碼是什麼。當您的朋友進行猜測時，您會提供以下信息的提示：</p>
+<p>“公牛”的數量，即猜測中處於正確位置的數字。<br>“奶牛”的數量，即猜測中的數字，它們在您的密碼中，但位於錯誤的位置。具體來說，猜測中的非多頭數字可以重新排列，使其成為多頭。<br>給定秘密數字 secret 和你朋友的猜測，返回你朋友猜測的提示。</p>
+<p>提示的格式應為“xAyB”，其中 x 是公牛的數量，y 是奶牛的數量。請注意，秘密和猜測都可能包含重複的數字。</p>
 <h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line">[&quot;StockSpanner&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;]</span><br><span class="line">[[], [100], [80], [60], [70], [60], [75], [85]]</span><br><span class="line">Output</span><br><span class="line">[null, 1, 1, 1, 2, 1, 4, 6]</span><br><span class="line"></span><br><span class="line">Explanation</span><br><span class="line">StockSpanner stockSpanner = new StockSpanner();</span><br><span class="line">stockSpanner.next(100); // return 1</span><br><span class="line">stockSpanner.next(80);  // return 1</span><br><span class="line">stockSpanner.next(60);  // return 1</span><br><span class="line">stockSpanner.next(70);  // return 2</span><br><span class="line">stockSpanner.next(60);  // return 1</span><br><span class="line">stockSpanner.next(75);  // return 4, because the last 4 prices (including today&#x27;s price of 75) were less than or equal to today&#x27;s price.</span><br><span class="line">stockSpanner.next(85);  // return 6</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: secret = &quot;1807&quot;, guess = &quot;7810&quot;</span><br><span class="line">Output: &quot;1A3B&quot;</span><br><span class="line">Explanation: Bulls are connected with a &#x27;|&#x27; and cows are underlined:</span><br><span class="line">&quot;1807&quot;</span><br><span class="line">  |</span><br><span class="line">&quot;7810&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: secret = &quot;1123&quot;, guess = &quot;0111&quot;</span><br><span class="line">Output: &quot;1A1B&quot;</span><br><span class="line">Explanation: Bulls are connected with a &#x27;|&#x27; and cows are underlined:</span><br><span class="line">&quot;1123&quot;        &quot;1123&quot;</span><br><span class="line">  |      or     |</span><br><span class="line">&quot;0111&quot;        &quot;0111&quot;</span><br><span class="line">Note that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull.</span><br></pre></td></tr></table></figure>
 
 
 
 
 <h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><ol>
-<li>用一個陣列儲存</li>
-<li>next中num用來記數，與陣列的數做比較，若價錢小於數時跳出迴圈返回記數</li>
+<li>設 A和B分別儲存A和B數量，dultip將已經為A的位置儲存，remain將guess未配對到的數儲存</li>
+<li>首先secret和guess做比較將為A的位置存入dultip及剩餘guess的數存入remain</li>
+<li>在做B的判斷，secret迴圈去跟remain做比較，若遇到dultip裡的位置時跳過判斷，當remain包含secret，將B + 1及把數從remain刪掉</li>
 </ol>
-<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">StockSpanner</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">arr</span>=[];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">price</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">StockSpanner</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">next</span> = <span class="keyword">function</span>(<span class="params">price</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">arr</span>.<span class="title function_">push</span>(price);</span><br><span class="line">    <span class="keyword">let</span> num=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="variable language_">this</span>.<span class="property">arr</span>.<span class="property">length</span>-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(price&lt;<span class="variable language_">this</span>.<span class="property">arr</span>[i])&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getHint = <span class="keyword">function</span> (<span class="params">secret, guess</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> A = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> B = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> dultip = [];</span><br><span class="line">    <span class="keyword">let</span> remain = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; secret.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (secret[i] === guess[i]) &#123;</span><br><span class="line">            A++;</span><br><span class="line">            dultip.<span class="title function_">push</span>(i);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            remain.<span class="title function_">push</span>(guess[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; secret.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(dultip.<span class="title function_">includes</span>(i)) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(remain.<span class="title function_">includes</span>(secret[i]))&#123;</span><br><span class="line">           <span class="keyword">let</span> index=remain.<span class="title function_">indexOf</span>(secret[i]);</span><br><span class="line">           B++;</span><br><span class="line">           remain.<span class="title function_">splice</span>(index,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> A + <span class="string">&quot;A&quot;</span> + B + <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -328,8 +333,8 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode1544/" rel="prev" title="Javascript(leetcode#1544) Make The String Great">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#1544) Make The String Great
+    <a href="/leetcode/leetcode1047/" rel="prev" title="Javascript(leetcode#1047) Remove All Adjacent Duplicates In String">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#1047) Remove All Adjacent Duplicates In String
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -413,7 +418,7 @@ crossorigin="anonymous"></script>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-count">150</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -568,9 +573,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode901/";
-    this.page.identifier = "leetcode901/";
-    this.page.title = "Javascript(leetcode#901) Longest Palindrome by Concatenating Two Letter Words";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode299/";
+    this.page.identifier = "leetcode/leetcode299/";
+    this.page.title = "Javascript(leetcode#299) Bulls and Cows";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

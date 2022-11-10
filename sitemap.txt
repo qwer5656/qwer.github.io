@@ -1,4 +1,6 @@
-https://qwer5656.github.io/leetcode901/
+https://qwer5656.github.io/leetcode/leetcode299/
+https://qwer5656.github.io/leetcode/leetcode1047/
+https://qwer5656.github.io/leetcode/leetcode901/
 https://qwer5656.github.io/leetcode/leetcode1544/
 https://qwer5656.github.io/leetcode/leetcode283/
 https://qwer5656.github.io/designpattern/solid/
