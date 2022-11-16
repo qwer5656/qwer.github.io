@@ -35,24 +35,21 @@ crossorigin="anonymous"></script>
 </script>
 
 
-  <meta name="description" content="Difficult:Medium 題目Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows: The left subtree of a node contains only nodes with keys les">
+  <meta name="description" content="Difficult:Easy 題目We are playing the Guess Game. The game is as follows: I pick a number from 1 to n. You have to guess which number I picked. Every time you guess wrong, I will tell you whether the nu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript(leetcode#98)  Validate Binary Search Tree">
-<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode98/index.html">
+<meta property="og:title" content="Javascript(leetcode#374) Guess Number Higher or Lower">
+<meta property="og:url" content="https://qwer5656.github.io/leetcode/leetcode374/index.html">
 <meta property="og:site_name" content="Neil coding之路">
-<meta property="og:description" content="Difficult:Medium 題目Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows: The left subtree of a node contains only nodes with keys les">
+<meta property="og:description" content="Difficult:Easy 題目We are playing the Guess Game. The game is as follows: I pick a number from 1 to n. You have to guess which number I picked. Every time you guess wrong, I will tell you whether the nu">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_1.jpg">
-<meta property="og:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_2.jpg">
-<meta property="article:published_time" content="2022-09-14T07:41:30.000Z">
-<meta property="article:modified_time" content="2022-09-14T08:47:04.000Z">
+<meta property="article:published_time" content="2022-11-16T01:32:06.000Z">
+<meta property="article:modified_time" content="2022-11-16T01:34:57.157Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qwer5656.github.io/image/leetcode/leetcode98_1.jpg">
 
-<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode98/">
+<link rel="canonical" href="https://qwer5656.github.io/leetcode/leetcode374/">
 
 
 <script id="page-configurations">
@@ -65,7 +62,7 @@ crossorigin="anonymous"></script>
   };
 </script>
 
-  <title>Javascript(leetcode#98)  Validate Binary Search Tree | Neil coding之路</title>
+  <title>Javascript(leetcode#374) Guess Number Higher or Lower | Neil coding之路</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YED3XYFWGE"></script>
     <script>
@@ -218,7 +215,7 @@ crossorigin="anonymous"></script>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode98/">
+    <link itemprop="mainEntityOfPage" href="https://qwer5656.github.io/leetcode/leetcode374/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/image/avatar.jpg">
@@ -231,7 +228,7 @@ crossorigin="anonymous"></script>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Javascript(leetcode#98)  Validate Binary Search Tree
+          Javascript(leetcode#374) Guess Number Higher or Lower
         </h1>
 
         <div class="post-meta">
@@ -242,7 +239,7 @@ crossorigin="anonymous"></script>
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2022-09-14 15:41:30 / 修改時間：16:47:04" itemprop="dateCreated datePublished" datetime="2022-09-14T15:41:30+08:00">2022-09-14</time>
+              <time title="創建時間：2022-11-16 09:32:06 / 修改時間：09:34:57" itemprop="dateCreated datePublished" datetime="2022-11-16T09:32:06+08:00">2022-11-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,7 +251,7 @@ crossorigin="anonymous"></script>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/Leetcode-Medium/" itemprop="url" rel="index"><span itemprop="name">Leetcode Medium</span></a>
+                  <a href="/categories/Leetcode/Leetcode-Easy/" itemprop="url" rel="index"><span itemprop="name">Leetcode Easy</span></a>
                 </span>
             </span>
 
@@ -274,8 +271,8 @@ crossorigin="anonymous"></script>
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/leetcode/leetcode98/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode98/" itemprop="commentCount"></span>
+    <a title="disqus" href="/leetcode/leetcode374/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode/leetcode374/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -290,24 +287,34 @@ crossorigin="anonymous"></script>
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Difficult:Medium</strong></p>
-<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>Given the root of a binary tree, determine if it is a valid binary search tree (BST).</p>
-<p>A valid BST is defined as follows:</p>
-<p>The left subtree of a node contains only nodes with keys less than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>Both the left and right subtrees must also be binary search trees.</p>
+        <p><strong>Difficult:Easy</strong></p>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>We are playing the Guess Game. The game is as follows:</p>
+<p>I pick a number from 1 to n. You have to guess which number I picked.</p>
+<p>Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.</p>
+<p>You call a pre-defined API int guess(int num), which returns three possible results:</p>
+<p>-1: Your guess is higher than the number I picked (i.e. num &gt; pick).<br>1: Your guess is lower than the number I picked (i.e. num &lt; pick).<br>0: your guess is equal to the number I picked (i.e. num &#x3D;&#x3D; pick).<br>Return the number that I picked.</p>
 <span id="more"></span>
 
-<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>給定二叉樹的根，確定它是否是有效的二叉搜索樹 (BST)。</p>
-<p>有效的 BST 定義如下：</p>
-<p>節點的左子樹僅包含鍵小於節點鍵的節點。<br>節點的右子樹只包含鍵大於節點鍵的節點。<br>左右子樹也必須是二叉搜索樹。</p>
-<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:<br><img src="/../image/leetcode/leetcode98_1.jpg" alt="example" title="example"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [2,1,3]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<h1 id="翻譯"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯</h1><p>我們正在玩猜謎遊戲。遊戲如下：</p>
+<p>我從 1 到 n 中選擇一個數字。你得猜猜我選了哪個號碼。</p>
+<p>每次你猜錯，我都會告訴你我選的數字是比你猜的高還是低。</p>
+<p>您調用預定義的 API int guess(int num)，它返回三種可能的結果：</p>
+<p>-1：你猜的比我選的數字大（即 num &gt; pick）。<br>1：你猜的比我選的數字小（即num &lt; pick）。<br>0：你的猜測等於我選擇的數字（即 num &#x3D;&#x3D; pick）。<br>返回我選擇的號碼。</p>
+<h1 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h1><p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 10, pick = 6</span><br><span class="line">Output: 6</span><br></pre></td></tr></table></figure>
 
-<p>Example 2:<br><img src="/../image/leetcode/leetcode98_2.jpg" alt="example" title="example"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [5,1,4,null,null,3,6]</span><br><span class="line">Output: false</span><br><span class="line">Explanation: The root node&#x27;s value is 5 but its right child&#x27;s value is 4.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 1, pick = 1</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+
+<p>Example 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 2, pick = 1</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>1.利用動態規劃<br>2.已知條件1.左邊比中間小及右邊比中間大</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isValidBST = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="title function_">isValidBSTHelper</span>(root, -<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">isValidBSTHelper</span> = (<span class="params">root, low, high</span>) =&gt; &#123;</span><br><span class="line">   <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> root.<span class="property">val</span> &gt; low &amp;&amp; root.<span class="property">val</span> &lt; high &amp;&amp;</span><br><span class="line">       <span class="title function_">isValidBSTHelper</span>(root.<span class="property">left</span>, low, root.<span class="property">val</span>) &amp;&amp;</span><br><span class="line">       <span class="title function_">isValidBSTHelper</span>(root.<span class="property">right</span>, root.<span class="property">val</span>, high);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><ol>
+<li>設上限和下限，取中間值來判斷是否猜對</li>
+</ol>
+<h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> guessNumber = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> num=<span class="title class_">Math</span>.<span class="title function_">floor</span>(n/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">let</span> cell=n;</span><br><span class="line">    <span class="keyword">let</span> floor=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="title function_">guess</span>(num)!=<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_">guess</span>(num)==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">let</span> mids=<span class="title class_">Math</span>.<span class="title function_">ceil</span>((cell+num)/<span class="number">2</span>);</span><br><span class="line">            floor=num;</span><br><span class="line">             num=mids;</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_">guess</span>(num)==-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">let</span> mids=<span class="title class_">Math</span>.<span class="title function_">floor</span>((floor+num)/<span class="number">2</span>);</span><br><span class="line">            cell=num;</span><br><span class="line">            num=mids;</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -326,13 +333,10 @@ crossorigin="anonymous"></script>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/leetcode/leetcode97/" rel="prev" title="Javascript(leetcode#97)  Interleaving String">
-      <i class="fa fa-chevron-left"></i> Javascript(leetcode#97)  Interleaving String
+    <a href="/leetcode/leetcode222/" rel="prev" title="Javascript(leetcode#222) Count Complete Tree Nodes">
+      <i class="fa fa-chevron-left"></i> Javascript(leetcode#222) Count Complete Tree Nodes
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode/leetcode100/" rel="next" title="Javascript(leetcode100)   Same Tree">
-      Javascript(leetcode100)   Same Tree <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -398,7 +402,7 @@ crossorigin="anonymous"></script>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BF%BB%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">翻譯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">範例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">解題思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">5.</span> <span class="nav-text">程式碼</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -569,9 +573,9 @@ crossorigin="anonymous"></script>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://qwer5656.github.io/leetcode/leetcode98/";
-    this.page.identifier = "leetcode/leetcode98/";
-    this.page.title = "Javascript(leetcode#98)  Validate Binary Search Tree";
+    this.page.url = "https://qwer5656.github.io/leetcode/leetcode374/";
+    this.page.identifier = "leetcode/leetcode374/";
+    this.page.title = "Javascript(leetcode#374) Guess Number Higher or Lower";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
