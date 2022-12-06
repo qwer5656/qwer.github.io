@@ -1,3 +1,6 @@
+https://qwer5656.github.io/leetcode/leetcode328/
+https://qwer5656.github.io/leetcode/leetcode1706/
+https://qwer5656.github.io/leetcode/leetcode2131/
 https://qwer5656.github.io/leetcode/leetcode292/
 https://qwer5656.github.io/leetcode/leetcode223/
 https://qwer5656.github.io/leetcode/leetcode222/
@@ -9,10 +12,8 @@ https://qwer5656.github.io/leetcode/leetcode1544/
 https://qwer5656.github.io/leetcode/leetcode283/
 https://qwer5656.github.io/designpattern/solid/
 https://qwer5656.github.io/leetcode/leetcode345/
-https://qwer5656.github.io/leetcode/leetcode2131/
 https://qwer5656.github.io/leetcode/leetcode168/
 https://qwer5656.github.io/leetcode/leetcode167/
-https://qwer5656.github.io/leetcode/leetcode1706/
 https://qwer5656.github.io/leetcode/leetcode91/
 https://qwer5656.github.io/leetcode/leetcode49/
 https://qwer5656.github.io/leetcode/leetcode165/

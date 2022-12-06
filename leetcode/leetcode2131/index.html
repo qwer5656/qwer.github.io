@@ -43,7 +43,7 @@ crossorigin="anonymous"></script>
 <meta property="og:description" content="Difficult:Medium 題目You are given an array of strings words. Each element of words consists of two lowercase English letters. Create the longest possible palindrome by selecting some elements from word">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-11-03T02:33:10.000Z">
-<meta property="article:modified_time" content="2022-11-03T02:36:22.475Z">
+<meta property="article:modified_time" content="2022-11-18T00:55:41.288Z">
 <meta property="article:author" content="Neil">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Javascript">
@@ -157,7 +157,7 @@ crossorigin="anonymous"></script>
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">154</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">155</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -237,10 +237,16 @@ crossorigin="anonymous"></script>
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2022-11-03 10:33:10 / 修改時間：10:36:22" itemprop="dateCreated datePublished" datetime="2022-11-03T10:33:10+08:00">2022-11-03</time>
+              <time title="創建時間：2022-11-03 10:33:10" itemprop="dateCreated datePublished" datetime="2022-11-03T10:33:10+08:00">2022-11-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-11-18 08:55:41" itemprop="dateModified" datetime="2022-11-18T08:55:41+08:00">2022-11-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -318,6 +324,9 @@ crossorigin="anonymous"></script>
 <li>sum計算他們的總和</li>
 </ol>
 <h1 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longestPalindrome = <span class="keyword">function</span> (<span class="params">words</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> stack = [];</span><br><span class="line">    <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> check = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> val = words[i];</span><br><span class="line">        <span class="keyword">if</span> (!obj[val]) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val[<span class="number">0</span>] === val[<span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (stack.<span class="title function_">indexOf</span>(val) != -<span class="number">1</span>) &#123;</span><br><span class="line">                    stack.<span class="title function_">splice</span>(stack.<span class="title function_">indexOf</span>(val), <span class="number">1</span>);</span><br><span class="line">                    sum += <span class="number">4</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    stack.<span class="title function_">push</span>(val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> str = val[<span class="number">1</span>] + val[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">if</span> (obj[str]) &#123;</span><br><span class="line">                    obj[str].<span class="property">num</span>++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    obj[str] = &#123;</span><br><span class="line">                        val,</span><br><span class="line">                        <span class="attr">num</span>: <span class="number">1</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj[val].<span class="property">num</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                sum += <span class="number">4</span>;</span><br><span class="line">                check += <span class="number">4</span>;</span><br><span class="line">                obj[val].<span class="property">num</span>--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> str = val[<span class="number">1</span>] + val[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">if</span> (obj[str]) &#123;</span><br><span class="line">                    obj[str].<span class="property">num</span>++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    obj[str] = &#123;</span><br><span class="line">                        val,</span><br><span class="line">                        <span class="attr">num</span>: <span class="number">1</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (stack.<span class="property">length</span> != <span class="number">0</span>) &#123;</span><br><span class="line">        sum += <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
     </div>
 
     
@@ -424,7 +433,7 @@ crossorigin="anonymous"></script>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
